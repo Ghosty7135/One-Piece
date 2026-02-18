@@ -12,8 +12,9 @@ GLOBAL DESIGN SYSTEM & STYLES
     --parchment: #f4e4bc;
     --ink: #2b1d0e;
     --red-line: #cc0000;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 
     /* Page Specific Colors */
@@ -170,10 +171,10 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0b0e14;
+    background-color: transparent;
     color: #e0e0e0;
     line-height: 1.8;
-    background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+    background-image: linear-gradient(rgba(11, 14, 20, 0.4), rgba(11, 14, 20, 0.6)), url('https://www.transparenttextures.com/patterns/old-map.png');
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -217,12 +218,14 @@ body {
 
 /* HEADER & NAVIGATION */
 header {
-    background: linear-gradient(to bottom, var(--deep-sea), #0b0e14);
+    background: linear-gradient(to bottom, rgba(0, 68, 102, 0.4), rgba(11, 14, 20, 0.6));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: var(--gold);
     padding: 8rem 1rem;
     text-align: center;
     border-bottom: 3px solid var(--red-line);
-    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -255,8 +258,9 @@ header h1 {
 }
 
 nav {
-    background: rgba(11, 14, 20, 0.9);
-    backdrop-filter: blur(25px);
+    background: rgba(11, 14, 20, 0.4);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     padding: 1.5rem;
     position: sticky;
     top: 0;
@@ -284,6 +288,10 @@ nav a {
 }
 
 nav a:hover {
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
     color: var(--gold);
     text-shadow: 0 0 20px var(--gold);
     opacity: 1;
@@ -296,10 +304,11 @@ nav a:hover {
     margin: 4rem auto;
     border-radius: 40px;
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
     border: 1px solid var(--glass-border);
     padding: 5rem;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--glass-shadow);
 }
 
 /* Wide Container for Grids */
@@ -437,10 +446,13 @@ li:hover {
 .enlist-card {
     margin-top: 8rem;
     padding: 4rem;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(204, 0, 0, 0.05));
+    background: var(--glass-bg);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-radius: 30px;
     border: 1px solid var(--gold);
     text-align: center;
+    box-shadow: var(--glass-shadow);
 }
 
 .enlist-card h2 {
@@ -511,13 +523,14 @@ li:hover {
 
 .member-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
     border: 1px solid var(--glass-border);
     border-radius: 30px;
     overflow: hidden;
     transition: var(--transition-smooth);
     position: relative;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--glass-shadow);
 }
 
 .member-card:hover {
@@ -647,11 +660,14 @@ li:hover {
 
 .rank-card,
 .secret-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 2.5rem;
     border-radius: 20px;
     border: 1px solid var(--glass-border);
     transition: var(--transition-smooth);
+    box-shadow: var(--glass-shadow);
 }
 
 .rank-card:hover,
@@ -730,7 +746,9 @@ li:hover {
 }
 
 .crew-member-lite {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
@@ -763,7 +781,9 @@ li:hover {
 }
 
 .milestone-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
     padding: 2.5rem;
     border-radius: 20px;
@@ -831,13 +851,15 @@ li:hover {
 .flagship-box {
     margin-top: 6rem;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 4rem;
     border-radius: 30px;
     border: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
     gap: 4rem;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--glass-shadow);
 }
 
 .flagship-info {
@@ -857,8 +879,10 @@ li:hover {
 }
 
 .technique-card {
-    background: rgba(204, 0, 0, 0.1);
-    border: 1px solid rgba(204, 0, 0, 0.2);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
     padding: 1.5rem;
     border-radius: 15px;
     transition: var(--transition-smooth);
@@ -930,8 +954,10 @@ li:hover {
 footer {
     text-align: center;
     padding: 8rem 2rem;
-    background: #05070a;
-    color: #555;
+    background: rgba(11, 14, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #888;
     margin-top: 10rem;
     border-top: 1px solid var(--glass-border);
 }
