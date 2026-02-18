@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Newgate | Whitebeard</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --ocean-blue: #0077be;
+            --deep-sea: #004466;
+            --parchment: #f4e4bc;
+            --ink: #2b1d0e;
+            --red-line: #cc0000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --wb-blue: #00aaff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            line-height: 1.8;
+            background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #002244, #0b0e14);
+            color: var(--gold);
+            padding: 6rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--wb-blue);
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 10px;
+        }
+
+        nav {
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: all 0.4s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            text-shadow: 0 0 15px var(--gold);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .yonko-hero {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            background: url('https://images4.alphacoders.com/605/605156.jpg') center/cover;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .yonko-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--wb-blue);
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        h2,
+        h3 {
+            font-family: 'Pirata One', cursive;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            color: var(--wb-blue);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .quote {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            margin: 4rem 0;
+            color: var(--gold);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 2rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: #05070a;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="yonko.html">The Yonko</a>
+        <a href="join.html">Recruitment</a>
+    </nav>
+
+    <div class="container">
+        <div class="yonko-hero">
+            <div class="yonko-badge">LEGACY YONKO</div>
+        </div>
+
+        <h2>The Strongest Man in the World</h2>
+        <p>
+            Edward Newgate, better known as Whitebeard, was the captain of the Whitebeard Pirates and was widely known
+            as the "Strongest Man in the World" after the death of Gol D. Roger. He was one of the original Four
+            Emperors and was the man closest to finding the One Piece. Unlike other pirates, his only true treasure was
+            his "Family"—the crew he called his sons.
+        </p>
+
+        <div class="quote">
+            "ONE PIECE... IS REAL!"
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Gura Gura no Mi</h3>
+                <p>
+                    Whitebeard possessed the power of the <strong>Gura Gura no Mi</strong>, a Paramecia-type Devil Fruit
+                    that allowed him to create massive shockwaves through the air or land. These vibrations could
+                    trigger tsunamis and earthquakes, a power said to be capable of destroying the world itself.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>The Whitebeard Family</h3>
+                <p>
+                    Whitebeard's philosophy was unique: he didn't care for gold or fame. He used his position as a Yonko
+                    to create a gargantuan family. Every member of his crew, from the division commanders to the lowest
+                    deckhands, called him "Pops," and he would go to war with the entire world to protect a single one
+                    of them.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Marineford War</h3>
+                <p>
+                    Whitebeard's final stand took place at Marineford, where he led his entire fleet to rescue his
+                    "son," Portgas D. Ace. Despite his old age and illness, he fought through thousands of Marines and
+                    three Admirals. He died standing up, with no wounds on his back, proving he never once turned his
+                    back on a fight.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>The Final Legacy</h3>
+                <p>
+                    With his dying breath, Whitebeard confirmed to the entire world that the One Piece truly exists,
+                    reigniting the Great Pirate Era Roger had started. His death marked the end of an era and shifted
+                    the balance of power in the New World forever.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
+    </footer>
+
+</body>
+
+</html>

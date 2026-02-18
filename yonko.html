@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Four Emperors | Yonko Hub</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --ocean-blue: #0077be;
+            --deep-sea: #004466;
+            --parchment: #f4e4bc;
+            --ink: #2b1d0e;
+            --red-line: #cc0000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to bottom, var(--deep-sea), #0b0e14);
+            color: var(--gold);
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--red-line);
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 5px;
+        }
+
+        nav {
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            text-shadow: 0 0 10px var(--gold);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .hub-title {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .hub-title h2 {
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            color: var(--gold);
+            margin: 0;
+        }
+
+        .hub-title p {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+            color: var(--red-line);
+            font-weight: bold;
+        }
+
+        .yonko-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .yonko-card {
+            position: relative;
+            height: 600px;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            color: white;
+        }
+
+        .yonko-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .yonko-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .yonko-card:hover .yonko-img {
+            transform: scale(1.1);
+        }
+
+        .yonko-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 3rem 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 40%, transparent);
+            text-align: center;
+        }
+
+        .yonko-name {
+            font-family: 'Pirata One', cursive;
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin: 0;
+        }
+
+        .yonko-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: #ddd;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .legacy-section {
+            margin-top: 8rem;
+        }
+
+        .legacy-section h3 {
+            font-family: 'Pirata One', cursive;
+            font-size: 3.5rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: #05070a;
+            color: #555;
+            margin-top: 6rem;
+        }
+
+        /* Specific backgrounds for empty images or fallback */
+        .luffy {
+            background-color: #7a0000;
+        }
+
+        .shanks {
+            background-color: #4a0000;
+        }
+
+        .blackbeard {
+            background-color: #1a0033;
+        }
+
+        .buggy {
+            background-color: #001a33;
+        }
+
+        .whitebeard {
+            background-color: #003366;
+        }
+
+        .kaido {
+            background-color: #331a00;
+        }
+
+        .bigmom {
+            background-color: #4a0033;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="yonko.html">The Yonko</a>
+        <a href="join.html">Recruitment</a>
+    </nav>
+
+    <div class="container">
+        <div class="hub-title">
+            <h2>EMPERORS OF THE SEA</h2>
+            <p>THE FOUR RULERS OF THE NEW WORLD</p>
+        </div>
+
+        <!-- Current Yonko -->
+        <div class="yonko-grid">
+            <a href="luffy.html" class="yonko-card luffy">
+                <img src="https://images6.alphacoders.com/645/645300.jpg" alt="Luffy" class="yonko-img">
+                <div class="yonko-overlay">
+                    <h3 class="yonko-name">Monkey D. Luffy</h3>
+                    <span class="yonko-title">The Sun God Nika</span>
+                </div>
+            </a>
+
+            <a href="shanks.html" class="yonko-card shanks">
+                <img src="https://images2.alphacoders.com/521/521360.jpg" alt="Shanks" class="yonko-img">
+                <div class="yonko-overlay">
+                    <h3 class="yonko-name">Red-Haired Shanks</h3>
+                    <span class="yonko-title">The Haki Master</span>
+                </div>
+            </a>
+
+            <a href="blackbeard.html" class="yonko-card blackbeard">
+                <img src="https://images4.alphacoders.com/132/1323386.jpeg" alt="Blackbeard" class="yonko-img">
+                <div class="yonko-overlay">
+                    <h3 class="yonko-name">Marshall D. Teach</h3>
+                    <span class="yonko-title">The Master of Darkness</span>
+                </div>
+            </a>
+
+            <a href="buggy.html" class="yonko-card buggy">
+                <img src="https://images2.alphacoders.com/527/thumb-1920-527237.jpg" alt="Buggy" class="yonko-img">
+                <div class="yonko-overlay">
+                    <h3 class="yonko-name">Buggy the Clown</h3>
+                    <span class="yonko-title">The Genius Jester</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Legacy Yonko -->
+        <div class="legacy-section">
+            <h3>LEGENDARY PREDECESSORS</h3>
+            <div class="yonko-grid">
+                <a href="whitebeard.html" class="yonko-card whitebeard">
+                    <img src="https://images4.alphacoders.com/605/605156.jpg" alt="Whitebeard" class="yonko-img">
+                    <div class="yonko-overlay">
+                        <h3 class="yonko-name">Edward Newgate</h3>
+                        <span class="yonko-title">The Strongest Man in the World</span>
+                    </div>
+                </a>
+
+                <a href="kaido.html" class="yonko-card kaido">
+                    <img src="https://images4.alphacoders.com/132/1323387.jpeg" alt="Kaido" class="yonko-img">
+                    <div class="yonko-overlay">
+                        <h3 class="yonko-name">Kaido</h3>
+                        <span class="yonko-title">The Strongest Creature</span>
+                    </div>
+                </a>
+
+                <a href="bigmom.html" class="yonko-card bigmom">
+                    <img src="https://images2.alphacoders.com/130/1306611.jpg" alt="Big Mom" class="yonko-img">
+                    <div class="yonko-overlay">
+                        <h3 class="yonko-name">Charlotte Linlin</h3>
+                        <span class="yonko-title">The Queen of Totto Land</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT | EMPERORS DOSSIER</p>
+    </footer>
+
+</body>
+
+</html>
