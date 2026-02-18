@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+================================================================
+TABLE OF CONTENTS
+================================================================
+1. META DATA & LINKS
+2. DESIGN SYSTEM (ROOT VARIABLES)
+3. GLOBAL STYLES & TYPOGRAPHY
+4. ANIMATIONS & MOTION EFFECTS
+5. HEADER & NAVIGATION
+6. CHARACTER DOSSIER & HERO SECTION
+7. POWERS & AMBITIONS GRID
+8. FOOTER
+9. SCRIPTS (REVEAL LOGIC)
+================================================================
+-->
+
+<head>
+    <!-- [1. META DATA & LINKS] -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roronoa Zoro | King of Hell</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="yonko.html">The Yonko</a>
+        <a href="marines.html">The Marines</a>
+        <a href="revolutionary.html">The Revolutionary Army</a>
+    </nav>
+
+    <header class="reveal-node">
+        <h1>RORONOA ZORO</h1>
+        <p>THE KING OF HELL</p>
+    </header>
+
+    <div class="container">
+        <div class="yonko-hero reveal-node" style="background-image: url('assets/zoropic.jpg');">
+            <div class="yonko-badge">SWORDSMAN</div>
+        </div>
+
+        <div class="bounty-card reveal-node">
+            <p class="wanted">WANTED</p>
+            <div class="poster-img-container"
+                style="width: 100%; height: 250px; overflow: hidden; margin: 1rem 0; border: 5px solid #d4c19c;">
+                <img src="assets/zoropic.jpg" alt="Roronoa Zoro" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p style="font-size: 0.8rem; letter-spacing: 2px;">DEAD OR ALIVE</p>
+            <p class="amount">฿ 1,111,000,000</p>
+        </div>
+
+        <div class="reveal-node">
+            <h2>The Pirate Hunter</h2>
+            <p>Roronoa Zoro is the combatant of the Straw Hat Pirates and the first member to join. A master of the
+                unique Three Sword Style (Santoryu), his dream is to defeat Dracule Mihawk and become the World's
+                Greatest Swordsman.</p>
+        </div>
+
+        <div class="quote reveal-node">
+            "Scars on the back are a swordsman's shame."
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card reveal-node">
+                <h3>Santoryu Master</h3>
+                <p>Zoro wields three swords simultaneously—one in each hand and one in his mouth. This unique style
+                    allows him to unleash devastating multi-slash attacks like "Purgatory Onigiri" and the "1080 Pound
+                    Phoenix".</p>
+            </div>
+            <div class="info-card reveal-node">
+                <h3>King of Hell</h3>
+                <p>By mastering external Haki flow and infusing his swords with Advanced Conqueror's Haki, Zoro has
+                    attained the power to cut through anything, earning him the epithet "King of Hell".</p>
+            </div>
+        </div>
+
+        <div class="genealogy-box reveal-node">
+            <h3>THE LEGENDARY SWORDS</h3>
+            <p>Zoro's strength is amplified by the cursed and legendary blades he has collected.</p>
+            <div class="family-tree">
+                <div class="family-member">
+                    <h4>Wado Ichimonji</h4>
+                    <span>Great Grade Blade / Kuina's Will</span>
+                </div>
+                <div class="family-member">
+                    <h4>Sandai Kitetsu</h4>
+                    <span>Cursed Blade / Sharpness</span>
+                </div>
+                <div class="family-member">
+                    <h4>Enma</h4>
+                    <span>Great Grade Blade / Oden's Spirit</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-node" style="margin-top: 8rem;">
+            <h3>PATH OF THE ASHURA</h3>
+            <p>A journey forged in blood and steel, overcoming death time and again.</p>
+            <div class="milestone-grid">
+                <div class="milestone-card">
+                    <span class="year">BARATIE</span>
+                    <h4>The Vow</h4>
+                    <p>Defeated by Mihawk, he vows never to lose again until he claims the title of Greatest Swordsman.
+                    </p>
+                </div>
+                <div class="milestone-card">
+                    <span class="year">THRILLER BARK</span>
+                    <h4>Sacrifice</h4>
+                    <p>Takes only Luffy's pain from Kuma, proving his loyalty and endurance. "Nothing happened."</p>
+                </div>
+                <div class="milestone-card">
+                    <span class="year">TIME SKIP</span>
+                    <h4>Training</h4>
+                    <p>Bows to his enemy Mihawk to be trained, discarding his pride for the sake of his captain.</p>
+                </div>
+                <div class="milestone-card">
+                    <span class="year">WANO</span>
+                    <h4>King of Hell</h4>
+                    <p>Defeats King the Wildfire, awakening Conqueror's Haki and taming the demon sword Enma.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-node" style="margin-top: 8rem;">
+            <h3>SIGNATURE TECHNIQUES</h3>
+            <p>deadly precision and overwhelming power define his swordsmanship.</p>
+            <div class="technique-grid">
+                <div class="technique-card">
+                    <h4>Onigiri</h4>
+                    <p>His signature move. A three-way simultaneous slash that cuts the enemy's chest.</p>
+                </div>
+                <div class="technique-card">
+                    <h4>Asura: Dead Man's Game</h4>
+                    <p>A spiritual manifestation of nine swords, tripling his attack power.</p>
+                </div>
+                <div class="technique-card">
+                    <h4>Dragon Damnation</h4>
+                    <p>A finisher used to decapitate King, utilizing advanced Conqueror's Haki.</p>
+                </div>
+                <div class="technique-card">
+                    <h4>Billion-fold World Trichiliocosm</h4>
+                    <p>A secret technique capable of cutting through mountain-sized opponents like Pica.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
+    </footer>
+
+    <!-- [9. SCRIPTS] -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
