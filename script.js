@@ -181,6 +181,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const stars = new THREE.Points(starGeometry, starMaterial);
         scene.add(stars);
 
+        // Visibility Logic Based on Scroll
+        const header = document.querySelector('header');
+        const toggle3DEffects = () => {
+            if (!header) return;
+            const headerBottom = header.getBoundingClientRect().bottom;
+
+            // If header is out of view, hide the ship and stars to focus on content
+            const isVisible = headerBottom > 0;
+            shipGroup.visible = isVisible;
+            stars.visible = isVisible;
+
+            // Adjust water opacity or intensity if needed
+            water.material.uniforms['distortionScale'].value = isVisible ? 3.7 : 1.5;
+        };
+
+        window.addEventListener('scroll', toggle3DEffects);
+        toggle3DEffects(); // Run once on init
+
         // ANIMATION LOOP
         const animate = () => {
             requestAnimationFrame(animate);
