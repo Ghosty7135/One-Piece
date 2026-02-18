@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof confetti === 'function') {
                 const count = 200;
                 const defaults = {
-                    origin: { y: 0.7 },
+                    origin: { y: 0.8 },
                     colors: ['#FFD700', '#0077be', '#cc0000', '#ffffff'],
                     zIndex: 3000
                 };
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 20000);
-        camera.position.set(30, 30, 100);
+        camera.position.set(0, 40, 150); // Adjusted height and distance for better header Framing
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setPixelRatio(window.devicePixelRatio);
@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sail2.position.set(0, 10, -5);
         shipGroup.add(sail2);
 
+        shipGroup.position.y = 15; // Raised ship higher to sit in the header area
         scene.add(shipGroup);
 
         // STARS (Galaxy Effect)
