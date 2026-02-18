@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+================================================================
+TABLE OF CONTENTS
+================================================================
+1. META DATA & LINKS
+2. DESIGN SYSTEM (ROOT VARIABLES)
+3. GLOBAL STYLES & TYPOGRAPHY
+4. ANIMATIONS & REVEAL EFFECTS
+5. HEADER & NAVIGATION
+6. REVOLUTIONARY LORE & HERO SECTION
+7. QUOTES & KEY MEMBERS
+8. FOOTER
+9. SCRIPTS (REVEAL LOGIC)
+================================================================
+-->
+
 <head>
+    <!-- [1. META DATA & LINKS] -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Revolutionary Army | Winds of Change</title>
@@ -9,16 +26,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
+
     <style>
+        /* [2. DESIGN SYSTEM] */
         :root {
             --gold: #FFD700;
             --rev-green: #1a3d34;
-            --rev-light: #2d5a4c;
             --crimson: #a30000;
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
+            --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
+        /* [3. GLOBAL STYLES] */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -28,14 +48,48 @@
             line-height: 1.8;
             background-image: linear-gradient(rgba(26, 61, 52, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
             background-attachment: fixed;
+            overflow-x: hidden;
         }
 
+        /* [4. ANIMATIONS & REVEAL EFFECTS] */
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes drift {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .reveal-node {
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .reveal-node.visible {
+            opacity: 1;
+            animation: reveal 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        /* [5. HEADER & NAVIGATION] */
         header {
             background: linear-gradient(to bottom, #1a3d34, #0b0e14);
             color: var(--gold);
             padding: 6rem 1rem;
             text-align: center;
-            border-bottom: 3px solid var(--rev-light);
         }
 
         header h1 {
@@ -45,16 +99,10 @@
             letter-spacing: 12px;
         }
 
-        header p {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 4px;
-            color: #8da399;
-        }
-
         nav {
-            background: rgba(11, 14, 20, 0.85);
+            background: rgba(11, 14, 20, 0.9);
             backdrop-filter: blur(20px);
-            padding: 1.2rem;
+            padding: 1.5rem;
             position: sticky;
             top: 0;
             z-index: 2000;
@@ -65,18 +113,23 @@
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0.8rem 2.5rem;
+            padding: 0.8rem 2rem;
             font-family: 'Cinzel', serif;
             font-weight: bold;
-            transition: all 0.4s;
+            transition: var(--transition-smooth);
             text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            opacity: 0.7;
         }
 
         nav a:hover {
             color: var(--gold);
-            text-shadow: 0 0 15px var(--gold);
+            text-shadow: 0 0 20px var(--gold);
+            opacity: 1;
         }
 
+        /* [6. LORE & HERO SECTION] */
         .container {
             max-width: 1100px;
             margin: 4rem auto;
@@ -110,6 +163,7 @@
             color: white;
         }
 
+        /* [7. QUOTES & KEY MEMBERS] */
         h2,
         h3 {
             font-family: 'Pirata One', cursive;
@@ -124,7 +178,6 @@
 
         h3 {
             font-size: 2.2rem;
-            margin-top: 2.5rem;
             color: #8da399;
         }
 
@@ -140,12 +193,13 @@
             padding: 2.5rem;
             border-radius: 20px;
             border: 1px solid var(--glass-border);
-            transition: transform 0.3s;
+            transition: var(--transition-smooth);
         }
 
         .secret-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--gold);
         }
 
         .dragon-quote {
@@ -160,11 +214,13 @@
             border-bottom: 1px solid var(--glass-border);
         }
 
+        /* [8. FOOTER] */
         footer {
             text-align: center;
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             background: #05070a;
             color: #444;
+            margin-top: 10rem;
         }
     </style>
 </head>
@@ -177,48 +233,34 @@
         <a href="yonko.html">The Yonko</a>
         <a href="marines.html">The Marines</a>
         <a href="revolutionary.html">The Revolutionary Army</a>
-        <a href="join.html">Recruitment</a>
     </nav>
 
     <div class="container">
-        <div class="rev-hero">
+        <div class="rev-hero reveal-node">
             <div class="freedom-badge">REVOLUTION</div>
         </div>
 
-        <h2>Toppling the World Order</h2>
-        <p>
-            The Revolutionary Army is a powerful military organization that seeks to overthrow the World Government and
-            their oppressive celestial dragons. Unlike pirates who seek personal treasure, the Revolutionaries fight for
-            the liberation of nations and the restoration of freedom across the globe.
-        </p>
+        <div class="reveal-node">
+            <h2>Toppling the World Order</h2>
+            <p>The Revolutionary Army is a powerful military organization that seeks to overthrow the World Government
+                and their oppressive celestial dragons. Unlike pirates who seek personal treasure, the Revolutionaries
+                fight for the liberation of nations and the restoration of freedom across the globe.</p>
+        </div>
 
-        <div class="dragon-quote">
+        <div class="dragon-quote reveal-node">
             "There can be no happiness in a world where the unnecessary are tossed away."
         </div>
 
         <div class="secret-grid">
-            <div class="secret-card">
+            <div class="secret-card reveal-node">
                 <h3>Monkey D. Dragon</h3>
-                <p>The Supreme Commander and the "World's Worst Criminal." Dragon is Luffy's father and the bridge to
-                    the greatest secrets of the world. He is a master strategist who possesses an unknown power
-                    involving wind and storms.</p>
+                <p>The Supreme Commander and the "World's Worst Criminal." Dragon is Luffy's father and a master
+                    strategist who possesses an unknown power involving storms.</p>
             </div>
-            <div class="secret-card">
+            <div class="secret-card reveal-node">
                 <h3>Sabo: Flame Emperor</h3>
-                <p>The Revolutionary Army's Chief of Staff and Luffy's sworn brother. After inheriting the Flame-Flame
-                    Fruit from Ace, Sabo has become a symbol of rebellion, earning the title "Flame Emperor" after his
-                    infiltration of Mariejois.</p>
-            </div>
-            <div class="secret-card">
-                <h3>Emporio Ivankov</h3>
-                <p>The "Miracle Person" and commander of the G-Army. A master of the Horm-Horm Fruit, Ivankov leads the
-                    Newkama Land and serves as one of Dragon's closest and most loyal allies.</p>
-            </div>
-            <div class="secret-card">
-                <h3>The Liberation of Nations</h3>
-                <p>The Army works in the shadows, helping oppressed kingdoms rise up against their tyrants. Their
-                    network is vast, with commanders stationed in the North, South, East, West, and Grand Line
-                    divisions.</p>
+                <p>The Chief of Staff and Luffy's sworn brother. After inheriting the Flame-Flame Fruit, Sabo has become
+                    a global symbol of rebellion.</p>
             </div>
         </div>
     </div>
@@ -227,6 +269,16 @@
         <p>&copy; 2026 ONE PIECE FAN PROJECT | WINDS OF FREEDOM</p>
     </footer>
 
+    <!-- [9. SCRIPTS] -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-node').forEach(node => observer.observe(node));
+    </script>
 </body>
 
 </html>

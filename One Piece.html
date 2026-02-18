@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+================================================================
+TABLE OF CONTENTS (MASTER COPY)
+================================================================
+1. META DATA & LINKS
+2. DESIGN SYSTEM (ROOT VARIABLES)
+3. GLOBAL STYLES & TYPOGRAPHY
+4. ANIMATIONS & REVEAL EFFECTS
+5. HEADER & NAVIGATION
+6. HERO SECTION
+7. CORE CONTENT & LORE
+8. FOOTER
+9. SCRIPTS (REVEAL LOGIC)
+================================================================
+-->
+
 <head>
+    <!-- [1. META DATA & LINKS] -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Piece Fan Club | The Epic Tale</title>
+    <title>One Piece Fan Club | Master Template</title>
     <link rel="icon" type="image/webp" href="favicon.webp">
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
+
     <style>
+        /* [2. DESIGN SYSTEM] */
         :root {
             --gold: #FFD700;
             --ocean-blue: #0077be;
             --deep-sea: #004466;
-            --parchment: #f4e4bc;
-            --ink: #2b1d0e;
             --red-line: #cc0000;
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
+            --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
+        /* [3. GLOBAL STYLES] */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -30,29 +49,52 @@
             line-height: 1.8;
             background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
             background-attachment: fixed;
+            overflow-x: hidden;
         }
 
+        /* [4. ANIMATIONS & REVEAL EFFECTS] */
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal-node {
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .reveal-node.visible {
+            opacity: 1;
+            animation: reveal 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        /* [5. HEADER & NAVIGATION] */
         header {
             background: linear-gradient(to bottom, var(--deep-sea), #0b0e14);
             color: var(--gold);
-            padding: 5rem 1rem;
+            padding: 6rem 1rem;
             text-align: center;
             border-bottom: 3px solid var(--red-line);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
         }
 
         header h1 {
             font-family: 'Pirata One', cursive;
             font-size: 5rem;
             margin: 0;
-            letter-spacing: 10px;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+            letter-spacing: 12px;
         }
 
         nav {
-            background: rgba(11, 14, 20, 0.85);
+            background: rgba(11, 14, 20, 0.9);
             backdrop-filter: blur(20px);
-            padding: 1.2rem;
+            padding: 1.5rem;
             position: sticky;
             top: 0;
             z-index: 2000;
@@ -63,21 +105,23 @@
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0.8rem 2.5rem;
+            padding: 0.8rem 2rem;
             font-family: 'Cinzel', serif;
             font-weight: bold;
-            transition: all 0.4s;
+            transition: var(--transition-smooth);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            opacity: 0.7;
         }
 
         nav a:hover {
             color: var(--gold);
-            text-shadow: 0 0 15px var(--gold);
-            transform: translateY(-2px);
+            text-shadow: 0 0 20px var(--gold);
+            opacity: 1;
         }
 
+        /* [6. HERO SECTION] */
         .container {
             max-width: 1000px;
             margin: 4rem auto;
@@ -104,99 +148,18 @@
             border: 1px solid var(--glass-border);
         }
 
-        .hero h2 {
-            font-family: 'Pirata One', cursive;
-            font-size: 4rem;
-            color: var(--gold);
-            margin-bottom: 1rem;
-        }
-
-        h2,
-        h3,
-        h4 {
-            font-family: 'Pirata One', cursive;
-            color: var(--gold);
-            letter-spacing: 3px;
-        }
-
-        h2 {
-            font-size: 3rem;
-            margin-top: 3rem;
-        }
-
-        h3 {
-            font-size: 2.2rem;
-            margin-top: 2.5rem;
-        }
-
-        h4 {
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            color: var(--red-line);
-        }
-
-        .lore-section p {
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-            color: #d0d0d0;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            background: rgba(255, 255, 255, 0.03);
-            margin: 1rem 0;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--ocean-blue);
-            transition: all 0.3s;
-        }
-
-        li:hover {
-            background: rgba(255, 255, 255, 0.07);
-            transform: translateX(10px);
-        }
-
-        strong {
-            color: var(--gold);
-        }
-
+        /* [8. FOOTER] */
         footer {
             text-align: center;
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             background: #05070a;
             color: #555;
-            margin-top: 6rem;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .container>* {
-            animation: fadeIn 1s ease forwards;
+            margin-top: 10rem;
         }
     </style>
 </head>
 
 <body>
-
-    <header>
-        <h1>ONE PIECE</h1>
-        <p>THE GREATEST ADVENTURE IN HISTORY</p>
-    </header>
 
     <nav>
         <a href="index.html">The Story</a>
@@ -204,93 +167,33 @@
         <a href="yonko.html">The Yonko</a>
         <a href="marines.html">The Marines</a>
         <a href="revolutionary.html">The Revolutionary Army</a>
-        <a href="join.html">Recruitment</a>
     </nav>
 
-    <div class="container">
-        <div class="hero">
-            <h2>Enter the Grand Line</h2>
-            <p>The legendary treasure, One Piece, is waiting for the one who can find it.</p>
-        </div>
+    <div class="container reveal-node">
+        <header>
+            <h1>ONE PIECE</h1>
+            <p>MASTER COPY TEMPLATE</p>
+        </header>
 
-        <section class="lore-section">
-            <h2>The Epic Tale</h2>
-            <p>
-                Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the
-                Grand Line. The capture and execution of Roger by the World Government brought a change throughout the
-                world.
-                His last words before his death revealed the existence of the greatest treasure in the world, One Piece.
-            </p>
-            <p>
-                Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate,
-                embarks on a journey to find the treasure and become the next Pirate King.
-            </p>
-
-            <h3>The World of One Piece</h3>
-            <p>
-                The world is mostly covered in ocean, with a single massive continent known as the <strong>Red
-                    Line</strong>.
-                The most dangerous sea is the <strong>Grand Line</strong>, where the weather is unpredictable and
-                islands
-                are home to bizarre phenomena and powerful enemies.
-            </p>
-
-            <h3>Mysterious Powers</h3>
-            <ul>
-                <li><strong>Devil Fruits:</strong> Mysterious fruits that grant incredible powers in exchange for the
-                    ability to swim. They fall into three categories:
-                    <em>Paramecia</em> (body alterations), <em>Zoan</em> (animal transformations), and <em>Logia</em>
-                    (elemental control).
-                </li>
-                <li><strong>Haki:</strong> A mysterious power that allows users to harness their spiritual energy. It
-                    manifests as
-                    <em>Observation</em> (prediction), <em>Armament</em> (invisible armor), and the rare <em>Conqueror's
-                        Haki</em>
-                    (overpowering the will of others).
-                </li>
-            </ul>
-
-            <h3>The Balance of Power</h3>
-            <p>
-                The world is kept in a delicate balance by the <strong>World Government</strong> and their military
-                wing, the <strong>Marines</strong>. Opposing them are the <strong>Four Emperors (Yonko)</strong>, the
-                strongest
-                pirates in the New World, and the <strong>Revolutionary Army</strong>.
-            </p>
-
-            <h4>The Four Emperors (Yonko)</h4>
-            <p>
-                The Yonko are the four most powerful pirate captains in the world, residing in the second half of the
-                Grand Line.
-            </p>
-            <ul>
-                <li><a href="shanks.html" style="color: var(--gold); text-decoration: none;"><strong>Shanks "The
-                            Red-Haired":</strong></a> The man who inspired Luffy to become a pirate. Shanks is
-                    revered for his mastery of Haki.</li>
-                <li><a href="blackbeard.html" style="color: var(--gold); text-decoration: none;"><strong>Marshall D.
-                            Teach "Blackbeard":</strong></a> A man who embodies the dark side of piracy and
-                    wields two Devil Fruit powers.</li>
-                <li><a href="luffy.html" style="color: var(--gold); text-decoration: none;"><strong>Monkey D. Luffy
-                            "Straw Hat":</strong></a> In his "Gear 5" form, he becomes the <strong>Sun God
-                        Nika</strong>.</li>
-                <li><a href="buggy.html" style="color: var(--gold); text-decoration: none;"><strong>Buggy "The Genius
-                            Jester":</strong></a> The figurehead of the <strong>Cross
-                        Guild</strong>.</li>
-            </ul>
-            <p>
-                Legendary predecessors who once held this title include <a href="whitebeard.html"
-                    style="color: var(--gold); text-decoration: none;"><strong>Whitebeard</strong></a> (Edward Newgate),
-                <a href="kaido.html" style="color: var(--gold); text-decoration: none;"><strong>Kaido</strong></a> (The
-                King of Beasts), and <a href="bigmom.html"
-                    style="color: var(--gold); text-decoration: none;"><strong>Big Mom</strong></a> (Charlotte Linlin).
-            </p>
+        <section class="reveal-node">
+            <p>Master template content goes here...</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 ONE PIECE FAN PROJECT | I.C.T CLUB EXHIBITION</p>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
     </footer>
 
+    <!-- [9. SCRIPTS] -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-node').forEach(node => observer.observe(node));
+    </script>
 </body>
 
 </html>

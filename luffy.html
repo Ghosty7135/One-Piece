@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+================================================================
+TABLE OF CONTENTS
+================================================================
+1. META DATA & LINKS
+2. DESIGN SYSTEM (ROOT VARIABLES)
+3. GLOBAL STYLES & TYPOGRAPHY
+4. ANIMATIONS & MOTION EFFECTS
+5. HEADER & NAVIGATION
+6. YONKO DOSSIER & HERO SECTION
+7. POWERS & AMBITIONS GRID
+8. FOOTER
+9. SCRIPTS (REVEAL LOGIC)
+================================================================
+-->
+
 <head>
+    <!-- [1. META DATA & LINKS] -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monkey D. Luffy | The Sun God Nika</title>
@@ -9,19 +26,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
+
     <style>
+        /* [2. DESIGN SYSTEM] */
         :root {
             --gold: #FFD700;
             --ocean-blue: #0077be;
             --deep-sea: #004466;
-            --parchment: #f4e4bc;
-            --ink: #2b1d0e;
             --red-line: #cc0000;
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
             --luffy-red: #ff3e3e;
+            --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
+        /* [3. GLOBAL STYLES] */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -31,8 +50,33 @@
             line-height: 1.8;
             background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
             background-attachment: fixed;
+            overflow-x: hidden;
         }
 
+        /* [4. ANIMATIONS & REVEAL EFFECTS] */
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal-node {
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .reveal-node.visible {
+            opacity: 1;
+            animation: reveal 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        /* [5. HEADER & NAVIGATION] */
         header {
             background: linear-gradient(to bottom, #7a0000, #0b0e14);
             color: var(--gold);
@@ -45,13 +89,13 @@
             font-family: 'Pirata One', cursive;
             font-size: 5rem;
             margin: 0;
-            letter-spacing: 10px;
+            letter-spacing: 12px;
         }
 
         nav {
-            background: rgba(11, 14, 20, 0.85);
+            background: rgba(11, 14, 20, 0.9);
             backdrop-filter: blur(20px);
-            padding: 1.2rem;
+            padding: 1.5rem;
             position: sticky;
             top: 0;
             z-index: 2000;
@@ -62,18 +106,23 @@
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0.8rem 2.5rem;
+            padding: 0.8rem 2rem;
             font-family: 'Cinzel', serif;
             font-weight: bold;
-            transition: all 0.4s;
+            transition: var(--transition-smooth);
             text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            opacity: 0.7;
         }
 
         nav a:hover {
             color: var(--gold);
-            text-shadow: 0 0 15px var(--gold);
+            text-shadow: 0 0 20px var(--gold);
+            opacity: 1;
         }
 
+        /* [6. YONKO DOSSIER & HERO SECTION] */
         .container {
             max-width: 1100px;
             margin: 4rem auto;
@@ -108,6 +157,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
 
+        /* [7. POWERS & AMBITIONS GRID] */
         h2,
         h3 {
             font-family: 'Pirata One', cursive;
@@ -137,6 +187,13 @@
             padding: 2.5rem;
             border-radius: 20px;
             border: 1px solid var(--glass-border);
+            transition: var(--transition-smooth);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.06);
         }
 
         .quote {
@@ -151,21 +208,18 @@
             padding: 2rem 0;
         }
 
+        /* [8. FOOTER] */
         footer {
             text-align: center;
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             background: #05070a;
             color: #555;
+            margin-top: 10rem;
         }
     </style>
 </head>
 
 <body>
-
-    <header>
-        <h1>MONKEY D. LUFFY</h1>
-        <p>THE FREEST MAN ON THE OCEAN</p>
-    </header>
 
     <nav>
         <a href="index.html">The Story</a>
@@ -173,60 +227,38 @@
         <a href="yonko.html">The Yonko</a>
         <a href="marines.html">The Marines</a>
         <a href="revolutionary.html">The Revolutionary Army</a>
-        <a href="join.html">Recruitment</a>
     </nav>
 
+    <header class="reveal-node">
+        <h1>MONKEY D. LUFFY</h1>
+        <p>THE FREEST MAN ON THE OCEAN</p>
+    </header>
+
     <div class="container">
-        <div class="yonko-hero">
+        <div class="yonko-hero reveal-node">
             <div class="yonko-badge">YONKO</div>
         </div>
 
-        <h2>The Fifth Emperor</h2>
-        <p>
-            Monkey D. Luffy is the main protagonist of One Piece and the Captain of the Straw Hat Pirates. After his
-            monumental victory over Kaido, the "Strongest Creature in the World," Luffy was officially recognized as one
-            of the Four Emperors of the Sea. His journey began in the humble Foosha Village and has led him to the peak
-            of the piracy world.
-        </p>
+        <div class="reveal-node">
+            <h2>The Fifth Emperor</h2>
+            <p>Monkey D. Luffy is the main protagonist of One Piece and the Captain of the Straw Hat Pirates. After his
+                victory over Kaido, he was recognized as one of the Four Emperors of the Sea.</p>
+        </div>
 
-        <div class="quote">
+        <div class="quote reveal-node">
             "Being the Pirate King isn't about being the most powerful. It's about being the freest man in the world!"
         </div>
 
         <div class="info-grid">
-            <div class="info-card">
+            <div class="info-card reveal-node">
                 <h3>Sun God Nika</h3>
-                <p>
-                    Luffy's true power lies in the <strong>Hito Hito no Mi, Model: Nika</strong>, a Mythical Zoan-type
-                    fruit that was hidden by the World Government for 800 years under the name "Gomu Gomu no Mi." Upon
-                    awakening, it grants him the properties of rubber limited only by his imagination, transforming him
-                    into the "Warrior of Liberation."
-                </p>
+                <p>The true power of the <strong>Hito Hito no Mi, Model: Nika</strong>. Upon awakening, it grants him
+                    the properties of rubber limited only by his imagination.</p>
             </div>
-            <div class="info-card">
+            <div class="info-card reveal-node">
                 <h3>Haki Mastery</h3>
-                <p>
-                    Luffy is one of the extremely rare individuals capable of using all three types of Haki at an
-                    advanced level. This includes <strong>Internal Destruction Armament</strong>, <strong>Future Sight
-                        Observation</strong>, and <strong>Infusion of Conqueror's Haki</strong> into his attacks—a feat
-                    only the world's strongest pirates can achieve.
-                </p>
-            </div>
-            <div class="info-card">
-                <h3>The Straw Hat Legacy</h3>
-                <p>
-                    The hat Luffy wears was passed down to him by Shanks, who received it from the Pirate King himself,
-                    Gol D. Roger. It symbolizes a promise to meet again once Luffy has become a great pirate, carrying
-                    the will of D across the turbulent seas.
-                </p>
-            </div>
-            <div class="info-card">
-                <h3>Goal & Ambition</h3>
-                <p>
-                    Beyond finding the legendary One Piece, Luffy's true dream remains a secret shared only with his
-                    crew and brothers. His path is defined by loyalty to his friends, an insatiable appetite for
-                    adventure, and the liberation of oppressed people across the Grand Line.
-                </p>
+                <p>One of the rare individuals capable of using all three types of Haki at an advanced level, including
+                    Conqueror's Infusion.</p>
             </div>
         </div>
     </div>
@@ -235,6 +267,16 @@
         <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
     </footer>
 
+    <!-- [9. SCRIPTS] -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-node').forEach(node => observer.observe(node));
+    </script>
 </body>
 
 </html>
