@@ -620,9 +620,80 @@ li:hover {
     font-family: 'Cinzel', serif;
 }
 
-.yonko-hero,
-.marine-hero,
-.rev-hero {
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.milestone-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 20px;
+    position: relative;
+    border-top: 4px solid var(--gold);
+    transition: var(--transition-smooth);
+}
+
+.milestone-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-top-color: var(--luffy-red);
+}
+
+.milestone-card h4 {
+    margin: 0 0 1rem;
+    color: var(--gold);
+}
+
+.milestone-card .year {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--red-line);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-family: 'Cinzel', serif;
+}
+
+.genealogy-box {
+    margin-top: 6rem;
+    padding: 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    text-align: center;
+    border: 1px dashed var(--glass-border);
+}
+
+.family-tree {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.family-member {
+    flex: 1;
+    min-width: 200px;
+}
+
+.family-member h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.family-member span {
+    font-family: 'Cinzel', serif;
+    color: var(--accent);
+    font-size: 0.8rem;
+}
+
+.yonko-hero {
     width: 100%;
     height: 500px;
     border-radius: 20px;
