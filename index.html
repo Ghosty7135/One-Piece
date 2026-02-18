@@ -28,11 +28,17 @@ TABLE OF CONTENTS
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <div id="grand-line-3d"></div>
 
     <!-- [5. HEADER & NAVIGATION] -->
     <header>
@@ -96,6 +102,20 @@ TABLE OF CONTENTS
                 </ul>
             </div>
 
+            <div class="reveal-node" style="margin-top: 8rem;">
+                <h3>The Grand Line RPG Map</h3>
+                <p>Explore the legendary locations of the One Piece world. Click the points to discover the secrets of
+                    each sea.</p>
+                <div class="map-container">
+                    <div class="map-point" style="top: 45%; left: 15%;" data-location="Reverse Mountain"></div>
+                    <div class="map-point" style="top: 55%; left: 35%;" data-location="Alabasta"></div>
+                    <div class="map-point" style="top: 35%; left: 55%;" data-location="Skypiea"></div>
+                    <div class="map-point" style="top: 60%; left: 75%;" data-location="Enies Lobby"></div>
+                    <div class="map-point" style="top: 25%; left: 85%;" data-location="Marineford"></div>
+                    <div class="map-point" style="top: 50%; left: 92%;" data-location="Wano Country"></div>
+                </div>
+            </div>
+
             <!-- [8. MINIATURE ENLIST SECTION] -->
             <div class="enlist-card reveal-node">
                 <h2>SET SAIL WITH US</h2>
@@ -115,6 +135,8 @@ TABLE OF CONTENTS
             </div>
         </section>
     </div>
+
+    <div class="combat-toggle" id="combatToggle" title="Toggle Combat Mode">⚔️</div>
 
     <!-- [9. FOOTER] -->
     <footer>
