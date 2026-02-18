@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Marines | Marine Headquarters</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --marine-blue: #002b5c;
+            --marine-white: #f0f0f0;
+            --steel: #7a7a7a;
+            --justice-red: #cc0000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            line-height: 1.8;
+            background-image: linear-gradient(rgba(0, 43, 92, 0.85), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
+        }
+
+        header {
+            background: linear-gradient(to bottom, var(--marine-blue), #0b0e14);
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--justice-red);
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 15px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        header p {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 5px;
+            color: var(--steel);
+            font-weight: bold;
+        }
+
+        nav {
+            background: rgba(0, 43, 92, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: all 0.4s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            text-shadow: 0 0 15px var(--gold);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .marine-hero {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            background: url('https://w0.peakpx.com/wallpaper/1004/230/HD-wallpaper-one-piece-anime-garp-manga-marine-marines-navy-one-piece-sengoku.jpg') center/cover;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .justice-badge {
+            position: absolute;
+            bottom: -20px;
+            right: 40px;
+            background: white;
+            color: var(--marine-blue);
+            padding: 20px 40px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        h2,
+        h3 {
+            font-family: 'Cinzel', serif;
+            color: white;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--gold);
+        }
+
+        .rank-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .rank-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .absolute-justice {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: linear-gradient(45deg, #001a33, #002b5c);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .absolute-justice h3 {
+            color: var(--justice-red);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: #05070a;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="yonko.html">The Yonko</a>
+        <a href="marines.html">The Marines</a>
+        <a href="join.html">Recruitment</a>
+    </nav>
+
+    <div class="container">
+        <div class="marine-hero">
+            <div class="justice-badge">ABSOLUTE JUSTICE</div>
+        </div>
+
+        <h2>Military Might of the World Government</h2>
+        <p>
+            The Marines are the World Government's primary sea-based military force, tasked with maintaining global law
+            and order. Their reach extends to every corner of the Four Seas and the Grand Line. Under the banner of
+            "Absolute Justice," they hunt down pirates and revolutionaries who threaten the stability of the world
+            order.
+        </p>
+
+        <div class="absolute-justice">
+            <h3>ABSOLUTE JUSTICE</h3>
+            <p>The philosophical backbone of the Marines. While many follow it with honor, others use it to justify
+                extreme measures to maintain order, believing that no sacrifice is too great for the sake of global
+                peace.</p>
+        </div>
+
+        <div class="rank-grid">
+            <div class="rank-card">
+                <h3>The Fleet Admiral</h3>
+                <p><strong>Sakazuki (Akainu):</strong> The current leader of the Marines. Known for his "Thorough
+                    Justice" and Magma-Magma Fruit powers, he has moved Marine Headquarters into the New World to
+                    directly challenge the Yonko era.</p>
+            </div>
+            <div class="rank-card">
+                <h3>The Three Admirals</h3>
+                <p>The Marines' greatest individual powers. Current Admirals include <strong>Kizaru</strong> (Light),
+                    <strong>Fujitora</strong> (Gravity), and <strong>Ryokugyu</strong> (Forest). They represent the
+                    pinnacle of military combat strength.</p>
+            </div>
+            <div class="rank-card">
+                <h3>Marine Legends</h3>
+                <p><strong>Monkey D. Garp</strong> (The Hero) and <strong>Sengoku the Buddha</strong>. These veterans
+                    represent the previous era, having fought legendary battles against the Pirate King, Gol D. Roger,
+                    and Gold Lion Shiki.</p>
+            </div>
+            <div class="rank-card">
+                <h3>Cipher Pol (CP0)</h3>
+                <p>The World Government's secret intelligence agency. While not strictly Marines, they work in the
+                    shadows to handle assassinations and espionage that the public military cannot touch.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT | JUSTICE PREVAILS</p>
+    </footer>
+
+</body>
+
+</html>

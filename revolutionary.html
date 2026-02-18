@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Revolutionary Army | Winds of Change</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --rev-green: #1a3d34;
+            --rev-light: #2d5a4c;
+            --crimson: #a30000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            line-height: 1.8;
+            background-image: linear-gradient(rgba(26, 61, 52, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #1a3d34, #0b0e14);
+            color: var(--gold);
+            padding: 6rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--rev-light);
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 12px;
+        }
+
+        header p {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+            color: #8da399;
+        }
+
+        nav {
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: all 0.4s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            text-shadow: 0 0 15px var(--gold);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .rev-hero {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            background: url('https://w0.peakpx.com/wallpaper/326/748/HD-wallpaper-one-piece-monkey-d-dragon-sabo-revolutionary-army.jpg') center/cover;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .freedom-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--crimson);
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        h2,
+        h3 {
+            font-family: 'Pirata One', cursive;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            margin-top: 2.5rem;
+            color: #8da399;
+        }
+
+        .secret-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .secret-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s;
+        }
+
+        .secret-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .dragon-quote {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            margin: 4rem 0;
+            color: var(--gold);
+            padding: 3rem;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        footer {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: #05070a;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="yonko.html">The Yonko</a>
+        <a href="marines.html">The Marines</a>
+        <a href="join.html">Recruitment</a>
+    </nav>
+
+    <div class="container">
+        <div class="rev-hero">
+            <div class="freedom-badge">REVOLUTION</div>
+        </div>
+
+        <h2>Toppling the World Order</h2>
+        <p>
+            The Revolutionary Army is a powerful military organization that seeks to overthrow the World Government and
+            their oppressive celestial dragons. Unlike pirates who seek personal treasure, the Revolutionaries fight for
+            the liberation of nations and the restoration of freedom across the globe.
+        </p>
+
+        <div class="dragon-quote">
+            "There can be no happiness in a world where the unnecessary are tossed away."
+        </div>
+
+        <div class="secret-grid">
+            <div class="secret-card">
+                <h3>Monkey D. Dragon</h3>
+                <p>The Supreme Commander and the "World's Worst Criminal." Dragon is Luffy's father and the bridge to
+                    the greatest secrets of the world. He is a master strategist who possesses an unknown power
+                    involving wind and storms.</p>
+            </div>
+            <div class="secret-card">
+                <h3>Sabo: Flame Emperor</h3>
+                <p>The Revolutionary Army's Chief of Staff and Luffy's sworn brother. After inheriting the Flame-Flame
+                    Fruit from Ace, Sabo has become a symbol of rebellion, earning the title "Flame Emperor" after his
+                    infiltration of Mariejois.</p>
+            </div>
+            <div class="secret-card">
+                <h3>Emporio Ivankov</h3>
+                <p>The "Miracle Person" and commander of the G-Army. A master of the Horm-Horm Fruit, Ivankov leads the
+                    Newkama Land and serves as one of Dragon's closest and most loyal allies.</p>
+            </div>
+            <div class="secret-card">
+                <h3>The Liberation of Nations</h3>
+                <p>The Army works in the shadows, helping oppressed kingdoms rise up against their tyrants. Their
+                    network is vast, with commanders stationed in the North, South, East, West, and Grand Line
+                    divisions.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT | WINDS OF FREEDOM</p>
+    </footer>
+
+</body>
+
+</html>
