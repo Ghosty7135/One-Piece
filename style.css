@@ -312,7 +312,7 @@ nav a:hover {
 
 /* Wide Container for Grids */
 .wide-container {
-    max-width: 1400px;
+    max-width: 1600px;
     padding: 0 3rem;
     background: transparent;
     backdrop-filter: none;
@@ -599,9 +599,37 @@ li:hover {
 /* YONKO GRID & CARDS */
 .yonko-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-bottom: 8rem;
+}
+
+.yonko-grid.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.yonko-grid.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1400px) {
+    .yonko-grid.grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .yonko-grid.grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .yonko-grid.grid-4,
+    .yonko-grid.grid-3 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .yonko-card {
