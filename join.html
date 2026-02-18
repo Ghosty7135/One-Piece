@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         :root {
             --gold: #FFD700;
@@ -213,6 +214,55 @@
         <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
     </footer>
 
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Fire confetti!
+            var count = 200;
+            var defaults = {
+                origin: { y: 0.7 },
+                colors: ['#FFD700', '#0077be', '#cc0000', '#ffffff']
+            };
+
+            function fire(particleRatio, opts) {
+                confetti({
+                    ...defaults,
+                    ...opts,
+                    particleCount: Math.floor(count * particleRatio)
+                });
+            }
+
+            fire(0.25, {
+                spread: 26,
+                startVelocity: 55,
+            });
+            fire(0.2, {
+                spread: 60,
+            });
+            fire(0.35, {
+                spread: 100,
+                decay: 0.91,
+                scalar: 0.8
+            });
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 25,
+                decay: 0.92,
+                scalar: 1.2
+            });
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 45,
+            });
+
+            // Show alert
+            setTimeout(() => {
+                alert("Welcome to the Crew! We sail at dawn! 🏴‍☠️⛵");
+                this.reset();
+            }, 500);
+        });
+    </script>
 </body>
 
 </html>
