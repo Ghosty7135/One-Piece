@@ -12,9 +12,9 @@ GLOBAL DESIGN SYSTEM & STYLES
     --parchment: #f4e4bc;
     --ink: #2b1d0e;
     --red-line: #cc0000;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(11, 14, 20, 0.95);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 
     /* Page Specific Colors */
@@ -303,11 +303,11 @@ nav a:hover {
     margin: 4rem auto;
     border-radius: 40px;
     background: var(--glass-bg);
-    backdrop-filter: blur(30px) saturate(180%);
-    -webkit-backdrop-filter: blur(30px) saturate(180%);
     border: 1px solid var(--glass-border);
     padding: 5rem;
     box-shadow: var(--glass-shadow);
+    position: relative;
+    z-index: 5;
 }
 
 /* Wide Container for Grids */
@@ -362,7 +362,7 @@ ul {
 }
 
 li {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.05);
     margin: 1.5rem 0;
     padding: 2rem;
     border-radius: 20px;
