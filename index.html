@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Piece Fan Club | The Epic Tale</title>
     <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --gold: #FFD700;
@@ -14,83 +17,176 @@
             --parchment: #f4e4bc;
             --ink: #2b1d0e;
             --red-line: #cc0000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--parchment);
-            color: var(--ink);
-            line-height: 1.6;
-            background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            line-height: 1.8;
+            background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
         }
 
         header {
-            background-color: var(--deep-sea);
+            background: linear-gradient(to bottom, var(--deep-sea), #0b0e14);
             color: var(--gold);
-            padding: 2rem 1rem;
+            padding: 5rem 1rem;
             text-align: center;
-            border-bottom: 5px solid var(--red-line);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-bottom: 3px solid var(--red-line);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
         }
 
         nav {
-            background-color: var(--ocean-blue);
-            padding: 0.5rem;
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 2000;
             text-align: center;
+            border-bottom: 1px solid var(--glass-border);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0.5rem 1.5rem;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: all 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
         }
 
         nav a:hover {
-            background-color: rgba(255, 215, 0, 0.3);
-            border-radius: 4px;
+            color: var(--gold);
+            text-shadow: 0 0 15px var(--gold);
+            transform: translateY(-2px);
         }
 
         .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h1,
-        h2,
-        h3 {
-            color: var(--deep-sea);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            max-width: 1000px;
+            margin: 4rem auto;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .hero {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 3rem 1rem;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://w0.peakpx.com/wallpaper/411/735/HD-wallpaper-one-piece-straw-hats-sunny-go.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://w0.peakpx.com/wallpaper/411/735/HD-wallpaper-one-piece-straw-hats-sunny-go.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
-            margin-bottom: 2rem;
-            border-radius: 8px;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            border: 1px solid var(--glass-border);
+        }
+
+        .hero h2 {
+            font-family: 'Pirata One', cursive;
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        h2,
+        h3,
+        h4 {
+            font-family: 'Pirata One', cursive;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-top: 3rem;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            margin-top: 2.5rem;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            color: var(--red-line);
+        }
+
+        .lore-section p {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            color: #d0d0d0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.03);
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--ocean-blue);
+            transition: all 0.3s;
+        }
+
+        li:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        strong {
+            color: var(--gold);
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--deep-sea);
-            color: white;
-            margin-top: 3rem;
+            padding: 6rem 2rem;
+            background: #05070a;
+            color: #555;
+            margin-top: 6rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container>* {
+            animation: fadeIn 1s ease forwards;
         }
     </style>
 </head>
@@ -98,23 +194,23 @@
 <body>
 
     <header>
-        <h1>One Piece Fan Club</h1>
-        <p>Wealth, Fame, Power... We have it all here!</p>
+        <h1>ONE PIECE</h1>
+        <p>THE GREATEST ADVENTURE IN HISTORY</p>
     </header>
 
     <nav>
-        <a href="./index.html">The Story</a>
-        <a href="./characters.html">Straw Hat Crew</a>
-        <a href="./join.html">Join the Crew</a>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="join.html">Recruitment</a>
     </nav>
 
-    <div class="container" id="story">
+    <div class="container">
         <div class="hero">
             <h2>Enter the Grand Line</h2>
             <p>The legendary treasure, One Piece, is waiting for the one who can find it.</p>
         </div>
 
-        <section>
+        <section class="lore-section">
             <h2>The Epic Tale</h2>
             <p>
                 Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the
@@ -167,21 +263,14 @@
             <ul>
                 <li><strong>Shanks "The Red-Haired":</strong> The man who inspired Luffy to become a pirate. Shanks is
                     revered for his mastery of all three types of Haki, particularly his overwhelming Conqueror's Haki.
-                    His crew, the Red Hair Pirates, is known for being the most well-balanced and formidable in the sea.
-                    He serves as a mysterious peacekeeper of the Grand Line, having been a former member of the Pirate
-                    King's crew.</li>
-                <li><strong>Marshall D. Teach "Blackbeard":</strong> A man who embodies the dark side of piracy. By
-                    consuming the <em>Dark-Dark Fruit</em> and theft of the <em>Tremor-Tremor Fruit</em>, he became the
-                    only known person to wield two powers. Blackbeard is on a relentless hunt for the world's strongest
-                    Devil Fruits and believes that "A man's dreams will never end!"</li>
-                <li><strong>Monkey D. Luffy "Straw Hat":</strong> After defeating Kaido, Luffy awakened his true power:
-                    the <em>Human-Human Fruit, Model: Nika</em>. In his "Gear 5" form, he becomes the <strong>Sun God
-                        Nika</strong>, the Warrior of Liberation who fights with pure freedom and laughter. His goal is
-                    not to conquer, but to be the freest man on the seas.</li>
-                <li><strong>Buggy "The Genius Jester":</strong> Through a series of legendary misunderstandings and
-                    incredible luck, Buggy became the figurehead of the <strong>Cross Guild</strong>. By recruiting
-                    powerful figures like Dracule Mihawk and Sir Crocodile, he has turned the tables on the World
-                    Government by placing bounties on Marine officers.</li>
+                    He serves as a mysterious peacekeeper of the Grand Line.</li>
+                <li><strong>Marshall D. Teach "Blackbeard":</strong> A man who embodies the dark side of piracy. He is
+                    the only known person to wield two Devil Fruit powers simultaneously.</li>
+                <li><strong>Monkey D. Luffy "Straw Hat":</strong> In his "Gear 5" form, he becomes the <strong>Sun God
+                        Nika</strong>, the Warrior of Liberation who fights with pure freedom and laughter.</li>
+                <li><strong>Buggy "The Genius Jester":</strong> The figurehead of the <strong>Cross
+                        Guild</strong>, who has turned the tables on the World Government by placing bounties on
+                    Marines.</li>
             </ul>
             <p>
                 Legendary predecessors who once held this title include <strong>Whitebeard</strong> (Edward Newgate),
@@ -191,8 +280,9 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 One Piece Fan Project | Created for I.C.T Club Exhibition</p>
-        <p><a href="#" style="color: var(--gold);">Back to Top</a></p>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT | I.C.T CLUB EXHIBITION</p>
+        <p>"Inherited Will, The Destiny of the Age, and The Dreams of the People. As long as people continue to pursue
+            the meaning of Freedom, these things will never cease to be!"</p>
     </footer>
 
 </body>

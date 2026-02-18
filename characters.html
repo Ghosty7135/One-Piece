@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Straw Hat Crew | One Piece Fan Club</title>
     <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --gold: #FFD700;
@@ -14,95 +17,261 @@
             --parchment: #f4e4bc;
             --ink: #2b1d0e;
             --red-line: #cc0000;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent: #ff4d4d;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--parchment);
-            color: var(--ink);
+            background-color: #0b0e14;
+            color: #e0e0e0;
             line-height: 1.6;
-            background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-image: linear-gradient(rgba(11, 14, 20, 0.85), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
+            overflow-x: hidden;
         }
 
         header {
-            background-color: var(--deep-sea);
+            background: linear-gradient(to bottom, var(--deep-sea), #0b0e14);
             color: var(--gold);
-            padding: 2rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
-            border-bottom: 5px solid var(--red-line);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-bottom: 3px solid var(--red-line);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 8px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            animation: titleGlow 3s infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            }
         }
 
         nav {
-            background-color: var(--ocean-blue);
-            padding: 0.5rem;
+            background: rgba(11, 14, 20, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 1.2rem;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         }
 
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            padding: 0.5rem 1.5rem;
+            padding: 0.8rem 2.5rem;
             font-weight: bold;
-            transition: background 0.3s;
+            font-family: 'Cinzel', serif;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
         }
 
         nav a:hover {
-            background-color: rgba(255, 215, 0, 0.3);
-            border-radius: 4px;
+            color: var(--gold);
+            transform: translateY(-3px);
+            text-shadow: 0 0 15px var(--gold);
         }
 
         .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 3rem;
         }
 
-        h1,
-        h2,
-        h3 {
-            color: var(--deep-sea);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .section-title {
+            font-family: 'Pirata One', cursive;
+            font-size: 4rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
         }
 
-        table {
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, var(--red-line), transparent);
+            margin: 15px auto;
+        }
+
+        .crew-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .member-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .member-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .member-image-wrapper {
             width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            background: white;
+            height: 450px;
+            overflow: hidden;
+            position: relative;
         }
 
-        th,
-        td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        .member-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+            filter: grayscale(20%) contrast(1.1);
         }
 
-        th {
-            background-color: var(--ocean-blue);
+        .member-card:hover .member-image {
+            transform: scale(1.1);
+            filter: grayscale(0%) contrast(1.2);
+        }
+
+        .member-info {
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, transparent);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .member-name {
+            font-family: 'Pirata One', cursive;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .member-role {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--accent);
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .member-specialty {
+            font-size: 0.95rem;
+            color: #bbb;
+            font-style: italic;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .wanted-label {
+            position: absolute;
+            top: 25px;
+            right: -40px;
+            background: var(--red-line);
             color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+            padding: 8px 50px;
+            transform: rotate(45deg);
+            font-family: 'Pirata One', cursive;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            z-index: 10;
+            letter-spacing: 2px;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--deep-sea);
-            color: white;
-            margin-top: 3rem;
+            padding: 5rem 2rem;
+            background: #05070a;
+            color: #666;
+            margin-top: 6rem;
+            border-top: 1px solid #1a1f26;
+        }
+
+        footer p {
+            max-width: 600px;
+            margin: 10px auto;
+            font-size: 0.9rem;
+        }
+
+        /* Loading Animation */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .member-card {
+            animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        .member-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .member-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .member-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .member-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .member-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .member-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .member-card:nth-child(7) {
+            animation-delay: 0.7s;
         }
     </style>
 </head>
@@ -110,72 +279,119 @@
 <body>
 
     <header>
-        <h1>One Piece Fan Club</h1>
-        <p>Wealth, Fame, Power... We have it all here!</p>
+        <h1>STORY OF THE PIRATE KING</h1>
+        <p>WEALTH • FAME • POWER</p>
     </header>
 
     <nav>
         <a href="index.html">The Story</a>
-        <a href="characters.html">Straw Hat Crew</a>
-        <a href="join.html">Join the Crew</a>
+        <a href="characters.html">The Crew</a>
+        <a href="join.html">Recruitment</a>
     </nav>
 
     <div class="container">
-        <section id="characters">
-            <h2>The Straw Hat Pirates</h2>
-            <p>Meet the brave souls sailing aboard the Thousand Sunny:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Role</th>
-                        <th>Specialty</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monkey D. Luffy</td>
-                        <td>Captain</td>
-                        <td>Rubber Human (Gomu Gomu no Mi)</td>
-                    </tr>
-                    <tr>
-                        <td>Roronoa Zoro</td>
-                        <td>Swordsman</td>
-                        <td>Three-Sword Style</td>
-                    </tr>
-                    <tr>
-                        <td>Nami</td>
-                        <td>Navigator</td>
-                        <td>Weather Manipulation</td>
-                    </tr>
-                    <tr>
-                        <td>Usopp</td>
-                        <td>Sniper</td>
-                        <td>Marksmanship / Pop Greens</td>
-                    </tr>
-                    <tr>
-                        <td>Sanji</td>
-                        <td>Cook</td>
-                        <td>Black Leg Style</td>
-                    </tr>
-                    <tr>
-                        <td>Tony Tony Chopper</td>
-                        <td>Doctor</td>
-                        <td>Human-Reindeer Hybrid</td>
-                    </tr>
-                    <tr>
-                        <td>Nico Robin</td>
-                        <td>Archaeologist</td>
-                        <td>Flower-Flower Fruit</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <h2 class="section-title">The Straw Hat Pirates</h2>
+
+        <div class="crew-grid">
+            <!-- Luffy -->
+            <div class="member-card">
+                <span class="wanted-label">WANTED</span>
+                <div class="member-image-wrapper">
+                    <img src="https://images6.alphacoders.com/645/645300.jpg" alt="Monkey D. Luffy"
+                        class="member-image">
+                </div>
+                <div class="member-info">
+                    <span class="member-role">Captain</span>
+                    <h3 class="member-name">Monkey D. Luffy</h3>
+                    <p class="member-specialty">Human-Human Fruit, Model: Nika</p>
+                </div>
+            </div>
+
+            <!-- Zoro -->
+            <div class="member-card">
+                <span class="wanted-label">WANTED</span>
+                <div class="member-image-wrapper">
+                    <img src="https://images8.alphacoders.com/614/614392.jpg" alt="Roronoa Zoro" class="member-image">
+                </div>
+                <div class="member-info">
+                    <span class="member-role">Swordsman</span>
+                    <h3 class="member-name">Roronoa Zoro</h3>
+                    <p class="member-specialty">Three-Sword Style Master</p>
+                </div>
+            </div>
+
+            <!-- Nami -->
+            <div class="member-card">
+                <span class="wanted-label">WANTED</span>
+                <div class="member-image-wrapper">
+                    <img src="https://images4.alphacoders.com/648/648118.jpg" alt="Nami" class="member-image">
+                </div>
+                <div class="member-info">
+                    <span class="member-role">Navigator</span>
+                    <h3 class="member-name">Nami</h3>
+                    <p class="member-specialty">Expert Cartographer & Weather Control</p>
+                </div>
+            </div>
+
+            <!-- Usopp -->
+            <div class="member-card">
+                <span class="wanted-label">WANTED</span>
+                <div class="member-image-wrapper">
+                    <img src="https://images8.alphacoders.com/131/1313788.png" alt="Usopp" class="member-image">
+                </div>
+                <div class="member-info">
+                    <span class="member-role">Sniper</span>
+                    <h3 class="member-name">Usopp</h3>
+                    <p class="member-specialty">The Brave Warrior of the Sea</p>
+                </div>
+            </div>
+
+            <!-- Sanji -->
+            <div class="member-card">
+                <span class="wanted-label">WANTED</span>
+                <div class="member-image-wrapper">
+                    <img src="https://images2.alphacoders.com/130/1306616.jpg" alt="Sanji" class="member-image">
+                </div>
+                <div class="member-info">
+                    <span class="member-role">Cook</span>
+                    <h3 class="member-name">Sanji</h3>
+                    <p class="member-specialty">Expert Chef & Black Leg Combatant</p>
+                </div>
+            </div>
+
+            <!-- Chopper -->
+            <div class="member-card">
+                <span class="wanted-label">WANTED</span>
+                <div class="member-image-wrapper">
+                    <img src="https://images.alphacoders.com/134/1340455.png" alt="Tony Tony Chopper"
+                        class="member-image">
+                </div>
+                <div class="member-info">
+                    <span class="member-role">Doctor</span>
+                    <h3 class="member-name">Tony Tony Chopper</h3>
+                    <p class="member-specialty">Human-Reindeer Medicine Expert</p>
+                </div>
+            </div>
+
+            <!-- Robin -->
+            <div class="member-card">
+                <span class="wanted-label">WANTED</span>
+                <div class="member-image-wrapper">
+                    <img src="https://images.alphacoders.com/134/1340454.png" alt="Nico Robin" class="member-image">
+                </div>
+                <div class="member-info">
+                    <span class="member-role">Archaeologist</span>
+                    <h3 class="member-name">Nico Robin</h3>
+                    <p class="member-specialty">Devil Child & Flower-Flower User</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 One Piece Fan Project | Created for I.C.T Club Exhibition</p>
-        <p><a href="#" style="color: var(--gold);">Back to Top</a></p>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT | I.C.T CLUB EXHIBITION</p>
+        <p>"Inherited Will, The Destiny of the Age, and The Dreams of the People. As long as people continue to pursue
+            the meaning of Freedom, these things will never cease to be!"</p>
     </footer>
 
 </body>

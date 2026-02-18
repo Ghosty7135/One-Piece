@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join the Crew | One Piece Fan Club</title>
     <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --gold: #FFD700;
@@ -14,107 +17,144 @@
             --parchment: #f4e4bc;
             --ink: #2b1d0e;
             --red-line: #cc0000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--parchment);
-            color: var(--ink);
+            background-color: #0b0e14;
+            color: #e0e0e0;
             line-height: 1.6;
-            background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
         }
 
         header {
-            background-color: var(--deep-sea);
+            background: linear-gradient(to bottom, var(--deep-sea), #0b0e14);
             color: var(--gold);
-            padding: 2rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
-            border-bottom: 5px solid var(--red-line);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-bottom: 3px solid var(--red-line);
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 5px;
         }
 
         nav {
-            background-color: var(--ocean-blue);
-            padding: 0.5rem;
+            background: rgba(11, 14, 20, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 1.2rem;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             text-align: center;
+            border-bottom: 1px solid var(--glass-border);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0.5rem 1.5rem;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            background-color: rgba(255, 215, 0, 0.3);
-            border-radius: 4px;
+            color: var(--gold);
+            text-shadow: 0 0 10px var(--gold);
         }
 
         .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 5rem auto;
+            padding: 4rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
         }
 
-        h1,
-        h2,
-        h3 {
-            color: var(--deep-sea);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        h2 {
+            font-family: 'Pirata One', cursive;
+            font-size: 3.5rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .form-section {
-            background: var(--deep-sea);
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
+        .form-group {
+            margin-bottom: 2rem;
         }
 
-        .form-section input,
-        .form-section select,
-        .form-section textarea {
+        label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+        }
+
+        input,
+        select,
+        textarea {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            border: 1px solid #ccc;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
             box-sizing: border-box;
         }
 
-        .btn {
-            background-color: var(--gold);
-            color: var(--deep-sea);
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s, background 0.3s;
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
         }
 
-        .btn:hover {
-            transform: scale(1.05);
-            background-color: #e6c200;
+        button {
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(45deg, var(--red-line), #990000);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Pirata One', cursive;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.4s;
+            margin-top: 2rem;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 20px rgba(204, 0, 0, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(204, 0, 0, 0.5);
+            filter: brightness(1.2);
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--deep-sea);
-            color: white;
-            margin-top: 3rem;
+            padding: 5rem 2rem;
+            color: #555;
         }
     </style>
 </head>
@@ -122,50 +162,55 @@
 <body>
 
     <header>
-        <h1>One Piece Fan Club</h1>
-        <p>Wealth, Fame, Power... We have it all here!</p>
+        <h1>JOIN THE CREW</h1>
+        <p>YOUR JOURNEY TO THE ONE PIECE BEGINS HERE</p>
     </header>
 
     <nav>
         <a href="index.html">The Story</a>
-        <a href="characters.html">Straw Hat Crew</a>
-        <a href="join.html">Join the Crew</a>
+        <a href="characters.html">The Crew</a>
+        <a href="join.html">Recruitment</a>
     </nav>
 
     <div class="container">
-        <section id="join" class="form-section">
-            <h2>Join the Straw Hat Crew</h2>
-            <p>Do you have what it takes to sail the Grand Line? Apply now!</p>
-            <form action="#" method="get">
-                <label for="pname">Your Pirate Name:</label>
-                <input type="text" id="pname" name="pirate_name" placeholder="Straw Hat..." required>
+        <h2>Enlist Now</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Pirate Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+            </div>
 
-                <label for="prole">Desired Role:</label>
-                <select id="prole" name="role">
-                    <option value="fighter">Fighter</option>
+            <div class="form-group">
+                <label for="role">Desired Role</label>
+                <select id="role" name="role" required>
+                    <option value="">Choose your position...</option>
+                    <option value="swordsman">Swordsman</option>
                     <option value="navigator">Navigator</option>
-                    <option value="musician">Musician</option>
+                    <option value="sniper">Sniper</option>
+                    <option value="cook">Cook</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="archaeologist">Archaeologist</option>
                     <option value="shipwright">Shipwright</option>
-                    <option value="lookout">Lookout</option>
                 </select>
+            </div>
 
-                <label>Favorite Devil Fruit Type:</label><br>
-                <input type="radio" name="fruit" value="paramecia" checked> Paramecia
-                <input type="radio" name="fruit" value="zoan"> Zoan
-                <input type="radio" name="fruit" value="logia"> Logia
-                <br><br>
+            <div class="form-group">
+                <label for="fruit">Devil Fruit Power (If Any)</label>
+                <input type="text" id="fruit" name="fruit" placeholder="e.g. Gomu Gomu no Mi">
+            </div>
 
-                <label for="dream">What is your dream?</label>
-                <textarea id="dream" name="dream" rows="4" placeholder="To find the all blue..."></textarea>
+            <div class="form-group">
+                <label for="motivation">Why do you want to join?</label>
+                <textarea id="motivation" name="motivation" rows="5"
+                    placeholder="Tell us about your dream..."></textarea>
+            </div>
 
-                <button type="submit" class="btn">Set Sail!</button>
-            </form>
-        </section>
+            <button type="submit">SET SAIL WITH US!</button>
+        </form>
     </div>
 
     <footer>
-        <p>&copy; 2026 One Piece Fan Project | Created for I.C.T Club Exhibition</p>
-        <p><a href="#" style="color: var(--gold);">Back to Top</a></p>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
     </footer>
 
 </body>
