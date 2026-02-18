@@ -1,0 +1,587 @@
+/* 
+================================================================
+GLOBAL DESIGN SYSTEM & STYLES
+================================================================
+*/
+
+:root {
+    --gold: #FFD700;
+    --gold-glow: rgba(255, 215, 0, 0.3);
+    --ocean-blue: #0077be;
+    --deep-sea: #004466;
+    --parchment: #f4e4bc;
+    --ink: #2b1d0e;
+    --red-line: #cc0000;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    /* Page Specific Colors */
+    --accent: #ff4d4d;
+    --marine-blue: #002b5c;
+    --justice-red: #cc0000;
+    --rev-green: #1a3d34;
+    --crimson: #a30000;
+    --luffy-red: #ff3e3e;
+    --shanks-red: #cc0000;
+    --teach-purple: #4b0082;
+    --wb-blue: #00aaff;
+    --kaido-purple: #5c00a3;
+    --bm-pink: #ff69b4;
+}
+
+/* GLOBAL STYLES */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0e14;
+    color: #e0e0e0;
+    line-height: 1.8;
+    background-image: linear-gradient(rgba(11, 14, 20, 0.9), rgba(11, 14, 20, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* ANIMATIONS */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.reveal-node {
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.reveal-node.visible {
+    opacity: 1;
+    animation: reveal 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    background: linear-gradient(to bottom, var(--deep-sea), #0b0e14);
+    color: var(--gold);
+    padding: 8rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid var(--red-line);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Overrides */
+.marines-page header {
+    background: linear-gradient(to bottom, var(--marine-blue), #0b0e14);
+    color: white;
+    border-bottom: 5px solid var(--justice-red);
+}
+
+.revolutionary-page header {
+    background: linear-gradient(to bottom, var(--rev-green), #0b0e14);
+    border-bottom: 3px solid #2d5a4c;
+}
+
+header h1 {
+    font-family: 'Pirata One', cursive;
+    font-size: 6rem;
+    margin: 0;
+    letter-spacing: 15px;
+    text-shadow: 0 0 40px var(--gold-glow);
+    animation: floating 4s ease-in-out infinite;
+}
+
+.marines-page header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+nav {
+    background: rgba(11, 14, 20, 0.9);
+    backdrop-filter: blur(25px);
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+}
+
+.marines-page nav {
+    background: rgba(0, 43, 92, 0.9);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+nav a:hover {
+    color: var(--gold);
+    text-shadow: 0 0 20px var(--gold);
+    opacity: 1;
+    letter-spacing: 5px;
+}
+
+/* CONTAINER & LAYOUT */
+.container {
+    max-width: 1100px;
+    margin: 4rem auto;
+    border-radius: 40px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    padding: 5rem;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* Wide Container for Grids */
+.wide-container {
+    max-width: 1400px;
+    padding: 0 3rem;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* TYPOGRAPHY */
+h2,
+h3,
+h4 {
+    font-family: 'Pirata One', cursive;
+    color: var(--gold);
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin-top: 3.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+    color: var(--red-line);
+}
+
+.marines-page h2,
+.marines-page h3 {
+    font-family: 'Cinzel', serif;
+}
+
+p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: #ccc;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.02);
+    margin: 1.5rem 0;
+    padding: 2rem;
+    border-radius: 20px;
+    border-left: 5px solid var(--ocean-blue);
+    transition: var(--transition-smooth);
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: scale(1.02) translateX(15px);
+    border-left-color: var(--gold);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), url('https://w0.peakpx.com/wallpaper/411/735/HD-wallpaper-one-piece-straw-hats-sunny-go.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    margin-bottom: 5rem;
+    border: 1px solid var(--glass-border);
+    position: relative;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+}
+
+.hero h2 {
+    font-size: 5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+.hero-link {
+    padding: 1.2rem 3rem;
+    background: var(--red-line);
+    color: white;
+    text-decoration: none;
+    font-family: 'Pirata One', cursive;
+    font-size: 1.8rem;
+    border-radius: 50px;
+    letter-spacing: 4px;
+    transition: var(--transition-smooth);
+    border: 2px solid transparent;
+}
+
+.hero-link:hover {
+    background: transparent;
+    border-color: var(--gold);
+    color: var(--gold);
+    box-shadow: 0 0 30px var(--gold-glow);
+    transform: scale(1.1);
+}
+
+/* ENLIST SECTION */
+.enlist-card {
+    margin-top: 8rem;
+    padding: 4rem;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(204, 0, 0, 0.05));
+    border-radius: 30px;
+    border: 1px solid var(--gold);
+    text-align: center;
+}
+
+.enlist-card h2 {
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.enlist-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 3rem auto 0;
+}
+
+.enlist-form input,
+.enlist-form select {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    transition: var(--transition-smooth);
+}
+
+.enlist-form input:focus,
+.enlist-form select:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.enlist-form button {
+    grid-column: span 2;
+    padding: 1.5rem;
+    background: var(--red-line);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Pirata One', cursive;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    letter-spacing: 4px;
+}
+
+.enlist-form button:hover {
+    background: #ff0000;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+/* CREW & MEMBER CARDS */
+.section-title {
+    font-family: 'Pirata One', cursive;
+    font-size: 4rem;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 4rem;
+}
+
+.member-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.member-card:hover {
+    transform: translateY(-20px) scale(1.03);
+    border-color: var(--gold);
+    box-shadow: 0 30px 70px rgba(255, 215, 0, 0.1);
+}
+
+.member-image-wrapper {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+}
+
+.member-card:hover .member-image {
+    transform: scale(1.15);
+}
+
+.member-info {
+    padding: 3rem 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 40%, transparent);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.member-role {
+    font-family: 'Cinzel', serif;
+    color: var(--accent);
+    letter-spacing: 4px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.member-name {
+    font-family: 'Pirata One', cursive;
+    font-size: 2.8rem;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.wanted-label {
+    position: absolute;
+    top: 30px;
+    right: -45px;
+    background: var(--red-line);
+    color: white;
+    padding: 10px 60px;
+    transform: rotate(45deg);
+    font-family: 'Pirata One', cursive;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* YONKO GRID & CARDS */
+.yonko-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-bottom: 8rem;
+}
+
+.yonko-card {
+    position: relative;
+    height: 600px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.yonko-card:hover {
+    transform: translateY(-15px) rotate(1deg);
+    border-color: var(--gold);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.yonko-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.yonko-card:hover .yonko-img {
+    transform: scale(1.1);
+}
+
+.yonko-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4rem 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 40%, transparent);
+    text-align: center;
+}
+
+.yonko-name {
+    font-family: 'Pirata One', cursive;
+    font-size: 2.8rem;
+    color: var(--gold);
+    margin: 0;
+}
+
+/* MARINE & REVOLUTION GRIDS */
+.rank-grid,
+.secret-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.rank-card,
+.secret-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+}
+
+.rank-card:hover,
+.secret-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--gold);
+}
+
+.absolute-justice {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: linear-gradient(45deg, #001a33, #002b5c);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.dragon-quote,
+.quote {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    margin: 4rem 0;
+    color: var(--gold);
+    padding: 3rem;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* YONKO INDIVIDUAL PAGES */
+.yonko-hero,
+.marine-hero,
+.rev-hero {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    margin-bottom: 3rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.yonko-badge,
+.justice-badge,
+.freedom-badge {
+    position: absolute;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.yonko-badge {
+    top: 20px;
+    left: 20px;
+    background: var(--red-line);
+}
+
+.justice-badge {
+    bottom: -20px;
+    right: 40px;
+    background: white;
+    color: var(--marine-blue);
+    border-radius: 10px;
+}
+
+.freedom-badge {
+    top: 20px;
+    right: 20px;
+    background: var(--crimson);
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 8rem 2rem;
+    background: #05070a;
+    color: #555;
+    margin-top: 10rem;
+    border-top: 1px solid var(--glass-border);
+}
