@@ -233,6 +233,24 @@ li:hover {
     border-left-color: var(--gold);
 }
 
+.yonko-list li {
+    padding: 0;
+}
+
+.yonko-link {
+    display: block;
+    padding: 2rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+}
+
+.yonko-link:hover {
+    color: white;
+    text-shadow: 0 0 15px var(--gold);
+}
+
 /* HERO SECTION */
 .hero {
     height: 600px;
