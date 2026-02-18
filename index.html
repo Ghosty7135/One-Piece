@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece Fan Club | Straw Hat Pirates</title>
+    <style>
+        :root {
+            --gold: #FFD700;
+            --ocean-blue: #0077be;
+            --deep-sea: #004466;
+            --parchment: #f4e4bc;
+            --ink: #2b1d0e;
+            --red-line: #cc0000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--parchment);
+            color: var(--ink);
+            line-height: 1.6;
+            background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+        }
+
+        header {
+            background-color: var(--deep-sea);
+            color: var(--gold);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--red-line);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            background-color: var(--ocean-blue);
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 215, 0, 0.3);
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--deep-sea);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://w0.peakpx.com/wallpaper/411/735/HD-wallpaper-one-piece-straw-hats-sunny-go.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--ocean-blue);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .form-section {
+            background: var(--deep-sea);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: var(--gold);
+            color: var(--deep-sea);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #e6c200;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--deep-sea);
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>One Piece Fan Club</h1>
+        <p>Wealth, Fame, Power... We have it all here!</p>
+    </header>
+
+    <nav>
+        <a href="#story">The Story</a>
+        <a href="#characters">Straw Hat Crew</a>
+        <a href="#join">Join the Crew</a>
+    </nav>
+
+    <div class="container" id="story">
+        <div class="hero">
+            <h2>Enter the Grand Line</h2>
+            <p>The legendary treasure, One Piece, is waiting for the one who can find it.</p>
+        </div>
+
+        <section>
+            <h2>The Epic Tale</h2>
+            <p>
+                Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the
+                Grand Line.
+                The capture and execution of Roger by the World Government brought a change throughout the world.
+                His last words before his death revealed the existence of the greatest treasure in the world, One Piece.
+            </p>
+            <p>
+                Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate,
+                embarks on a journey to find the treasure and become the next Pirate King.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="characters">
+            <h2>The Straw Hat Pirates</h2>
+            <p>Meet the brave souls sailing aboard the Thousand Sunny:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Specialty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monkey D. Luffy</td>
+                        <td>Captain</td>
+                        <td>Rubber Human (Gomu Gomu no Mi)</td>
+                    </tr>
+                    <tr>
+                        <td>Roronoa Zoro</td>
+                        <td>Swordsman</td>
+                        <td>Three-Sword Style</td>
+                    </tr>
+                    <tr>
+                        <td>Nami</td>
+                        <td>Navigator</td>
+                        <td>Weather Manipulation</td>
+                    </tr>
+                    <tr>
+                        <td>Usopp</td>
+                        <td>Sniper</td>
+                        <td>Marksmanship / Pop Greens</td>
+                    </tr>
+                    <tr>
+                        <td>Sanji</td>
+                        <td>Cook</td>
+                        <td>Black Leg Style</td>
+                    </tr>
+                    <tr>
+                        <td>Tony Tony Chopper</td>
+                        <td>Doctor</td>
+                        <td>Human-Reindeer Hybrid</td>
+                    </tr>
+                    <tr>
+                        <td>Nico Robin</td>
+                        <td>Archaeologist</td>
+                        <td>Flower-Flower Fruit</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="join" class="form-section">
+            <h2>Join the Straw Hat Crew</h2>
+            <p>Do you have what it takes to sail the Grand Line? Apply now!</p>
+            <form action="#" method="get">
+                <label for="pname">Your Pirate Name:</label>
+                <input type="text" id="pname" name="pirate_name" placeholder="Straw Hat..." required>
+
+                <label for="prole">Desired Role:</label>
+                <select id="prole" name="role">
+                    <option value="fighter">Fighter</option>
+                    <option value="navigator">Navigator</option>
+                    <option value="musician">Musician</option>
+                    <option value="shipwright">Shipwright</option>
+                    <option value="lookout">Lookout</option>
+                </select>
+
+                <label>Favorite Devil Fruit Type:</label><br>
+                <input type="radio" name="fruit" value="paramecia" checked> Paramecia
+                <input type="radio" name="fruit" value="zoan"> Zoan
+                <input type="radio" name="fruit" value="logia"> Logia
+                <br><br>
+
+                <label for="dream">What is your dream?</label>
+                <textarea id="dream" name="dream" rows="4" placeholder="To find the all blue..."></textarea>
+
+                <button type="submit" class="btn">Set Sail!</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 One Piece Fan Project | Created for I.C.T Club Exhibition</p>
+        <p><a href="#" style="color: var(--gold);">Back to Top</a></p>
+    </footer>
+
+</body>
+
+</html>
