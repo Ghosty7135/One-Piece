@@ -25,17 +25,16 @@ TABLE OF CONTENTS
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
-</head>
 </head>
 
 <body>
-
     <header>
         <h1>STORY OF THE PIRATE KING</h1>
         <p>WEALTH • FAME • POWER</p>
     </header>
+
+    <div id="grand-line-3d"></div>
 
     <nav>
         <a href="index.html">The Story</a>
@@ -141,11 +140,17 @@ TABLE OF CONTENTS
         </div>
     </div>
 
+    <div class="combat-toggle" id="combatToggle" title="Toggle Combat Mode">⚔️</div>
+
     <footer>
         <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
     </footer>
 
     <!-- [8. SCRIPTS] -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
     <script src="script.js" defer></script>
 </body>
 
