@@ -28,9 +28,19 @@ TABLE OF CONTENTS
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
 </head>
 
 <body class="revolutionary-page">
+
+    <div id="grand-line-3d"></div>
+
+    <header>
+        <h1>THE REVOLUTIONARY ARMY</h1>
+        <p>WINDS OF LIBERATION</p>
+    </header>
 
     <nav>
         <a href="index.html">The Story</a>
@@ -61,14 +71,60 @@ TABLE OF CONTENTS
                 <h3>Monkey D. Dragon</h3>
                 <p>The Supreme Commander and the "World's Worst Criminal." Dragon is Luffy's father and a master
                     strategist who possesses an unknown power involving storms.</p>
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <h4>Dragon's Breath</h4>
+                        <p>A claw-based combat style that destroys the ground and environment.</p>
+                    </div>
+                </div>
             </div>
             <div class="secret-card reveal-node">
                 <h3>Sabo: Flame Emperor</h3>
                 <p>The Chief of Staff and Luffy's sworn brother. After inheriting the Flame-Flame Fruit, Sabo has become
                     a global symbol of rebellion.</p>
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <h4>Hien: Flame Wings</h4>
+                        <p>Infusing fire into Ryusoken for devastating aerial attacks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="secret-card reveal-node">
+                <h3>Bartholomew Kuma</h3>
+                <p>A former Warlord and current "Martyl of Revolution." His Nikyu Nikyu no Mi allows him to repel
+                    anything, including pain and exhaustion.</p>
+            </div>
+            <div class="secret-card reveal-node">
+                <h3>Emporio Ivankov</h3>
+                <p>The "Queen" of Kamabakka Kingdom and a G-Army Commander. Master of Newkama Kenpo and the Horu Horu no
+                    Mi (Horizon Fruit).</p>
+            </div>
+        </div>
+
+        <div class="genealogy-box reveal-node">
+            <h3>THE FOUR COMMANDERS</h3>
+            <div class="family-tree">
+                <div class="family-member">
+                    <h4>North Army</h4>
+                    <span>Karasu</span>
+                </div>
+                <div class="family-member">
+                    <h4>South Army</h4>
+                    <span>Lindbergh</span>
+                </div>
+                <div class="family-member">
+                    <h4>East Army</h4>
+                    <span>Belo Betty</span>
+                </div>
+                <div class="family-member">
+                    <h4>West Army</h4>
+                    <span>Morley</span>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="combat-toggle" id="combatToggle" title="Toggle Combat Mode">⚔️</div>
 
     <footer>
         <p>&copy; 2026 ONE PIECE FAN PROJECT | WINDS OF FREEDOM</p>

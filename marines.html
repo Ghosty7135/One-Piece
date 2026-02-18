@@ -28,10 +28,19 @@ TABLE OF CONTENTS
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
 </head>
 
 <body class="marines-page">
+
+    <div id="grand-line-3d"></div>
+
+    <header>
+        <h1>THE MARINES</h1>
+        <p>FOR JUSTICE AND GLOBAL ORDER</p>
+    </header>
 
     <nav>
         <a href="index.html">The Story</a>
@@ -63,16 +72,65 @@ TABLE OF CONTENTS
             <div class="rank-card reveal-node">
                 <h3>The Fleet Admiral</h3>
                 <p><strong>Sakazuki (Akainu):</strong> The current leader, known for his "Thorough Justice" and
-                    Magma-Magma Fruit powers.</p>
+                    Magma-Magma Fruit powers. He led the Marines to overwhelming victory at Marineford.</p>
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <h4>Great Eruption</h4>
+                        <p>A giant fist made of molten magma.</p>
+                    </div>
+                </div>
             </div>
             <div class="rank-card reveal-node">
                 <h3>The Three Admirals</h3>
-                <p>Current Admirals include <strong>Kizaru</strong>, <strong>Fujitora</strong>, and
-                    <strong>Ryokugyu</strong>. They represent the pinnacle of military strength.
+                <p>Current Admirals include <strong>Kizaru</strong> (Light), <strong>Fujitora</strong> (Gravity), and
+                    <strong>Ryokugyu</strong> (Nature). They represent the pinnacle of military strength.
                 </p>
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <h4>Yasakani no Magatama</h4>
+                        <p>Kizaru's rain of explosive light.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rank-card reveal-node">
+                <h3>The Hero of the Marines</h3>
+                <p><strong>Monkey D. Garp:</strong> A legendary Vice Admiral who cornered the Pirate King. Known for his
+                    "Fist of Love" and immense physical strength even without a Devil Fruit.</p>
+                <div class="technique-grid">
+                    <div class="technique-card">
+                        <h4>Galaxy Impact</h4>
+                        <p>A punch infused with Conqueror's Haki that decriminates buildings.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rank-card reveal-node">
+                <h3>Science Unit (SWORD)</h3>
+                <p>Led by <strong>Koby</strong> and <strong>X Drake</strong>. A secret unit of Marines who have
+                    technically resigned, allowing them to act without waiting for permission.</p>
+            </div>
+        </div>
+
+        <div class="genealogy-box reveal-node">
+            <h3>MARINE HEADQUARTERS: NEW MARIN FORD</h3>
+            <p>Located in the New World, the new stronghold stands as a massive fortress overlooking the Red Line.</p>
+            <div class="family-tree">
+                <div class="family-member">
+                    <h4>Fleet Admiral</h4>
+                    <span>Sakazuki</span>
+                </div>
+                <div class="family-member">
+                    <h4>Chief of Staff</h4>
+                    <span>Tsuru</span>
+                </div>
+                <div class="family-member">
+                    <h4>Inspector General</h4>
+                    <span>Sengoku</span>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="combat-toggle" id="combatToggle" title="Toggle Combat Mode">⚔️</div>
 
     <footer>
         <p>&copy; 2026 ONE PIECE FAN PROJECT | JUSTICE PREVAILS</p>
