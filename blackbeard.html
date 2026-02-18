@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marshall D. Teach | Blackbeard</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --ocean-blue: #0077be;
+            --deep-sea: #004466;
+            --parchment: #f4e4bc;
+            --ink: #2b1d0e;
+            --red-line: #cc0000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --teach-purple: #4b0082;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            line-height: 1.8;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #1a0033, #0b0e14);
+            color: var(--gold);
+            padding: 6rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--teach-purple);
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 10px;
+        }
+
+        nav {
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: all 0.4s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            text-shadow: 0 0 15px var(--gold);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .yonko-hero {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            background: url('https://images4.alphacoders.com/132/1323386.jpeg') center/cover;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .yonko-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--teach-purple);
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        h2,
+        h3 {
+            font-family: 'Pirata One', cursive;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            color: var(--teach-purple);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .quote {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            margin: 4rem 0;
+            color: #d0d0d0;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 2rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: #05070a;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MARSHALL D. TEACH</h1>
+        <p>THE DARKNESS OF THE NEW ERA</p>
+    </header>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="join.html">Recruitment</a>
+    </nav>
+
+    <div class="container">
+        <div class="yonko-hero">
+            <div class="yonko-badge">YONKO</div>
+        </div>
+
+        <h2>The Admiral of the Blackbeard Pirates</h2>
+        <p>
+            Marshall D. Teach, commonly known as Blackbeard, is the Admiral of the Blackbeard Pirates and one of the
+            Four Emperors. He rose to power by betraying the Whitebeard Pirates, capturing Portgas D. Ace, and
+            masterminding the greatest escape in Impel Down history. He is a calculating, patient, and ruthless predator
+            who believes in fate and the power of dreams.
+        </p>
+
+        <div class="quote">
+            "PEOPLE'S DREAMS... HAVE NO END!"
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>The Duality of Power</h3>
+                <p>
+                    Teach is the only person in history known to wield two Devil Fruit powers at once. He possesses the
+                    <strong>Yami Yami no Mi</strong> (Dark-Dark Fruit), which allows him to manipulate darkness and
+                    neutralize other fruit powers, and the <strong>Gura Gura no Mi</strong> (Tremor-Tremor Fruit), which
+                    he stole from Whitebeard to destroy the world with earthquakes.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Abnormal Body</h3>
+                <p>
+                    According to Marco and others who knew him on Whitebeard's ship, Teach has an "atypical body
+                    structure" that never sleeps. This unique physiology is rumored to be the reason he can survive
+                    consuming more than one Devil Fruit, though the exact nature remains one of the world's biggest
+                    mysteries.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Calculated Rise</h3>
+                <p>
+                    Everything Blackbeard does is part of a decades-long plan. He hid in the shadows of the Whitebeard
+                    Pirates for twenty years just to find the Dark-Dark Fruit. He used the Shichibukai position solely
+                    to gain access to Level 6 of Impel Down to recruit the world's most dangerous criminals for his
+                    crew.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Philosophy of Fate</h3>
+                <p>
+                    Unlike many villains, Teach is a firm believer in destiny and dreams. He respects those with strong
+                    wills and isn't afraid to let luck play its part. However, his version of dreams involves chaos and
+                    the total destruction of the existing world order to usher in his own era.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
+    </footer>
+
+</body>
+
+</html>

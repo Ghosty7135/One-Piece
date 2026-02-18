@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buggy the Genius Jester | The Luckiest Yonko</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --ocean-blue: #0077be;
+            --deep-sea: #004466;
+            --parchment: #f4e4bc;
+            --ink: #2b1d0e;
+            --red-line: #cc0000;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --buggy-blue: #0056b3;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            line-height: 1.8;
+            background-image: linear-gradient(rgba(11, 14, 20, 0.8), rgba(11, 14, 20, 0.9)), url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-attachment: fixed;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #001a33, #0b0e14);
+            color: var(--gold);
+            padding: 6rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--red-line);
+        }
+
+        header h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 10px;
+        }
+
+        nav {
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: all 0.4s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            text-shadow: 0 0 15px var(--gold);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .yonko-hero {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            background: url('https://images2.alphacoders.com/527/thumb-1920-527237.jpg') center/cover;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .yonko-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff4d4d;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        h2,
+        h3 {
+            font-family: 'Pirata One', cursive;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            color: var(--gold);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .quote {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            margin: 4rem 0;
+            color: #ff4d4d;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 2rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: #05070a;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>BUGGY THE CLOWN</h1>
+        <p>THE GENIUS JESTER & CROSS GUILD LEADER</p>
+    </header>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="join.html">Recruitment</a>
+    </nav>
+
+    <div class="container">
+        <div class="yonko-hero">
+            <div class="yonko-badge">YONKO</div>
+        </div>
+
+        <h2>The World's Most "Successful" Pirate</h2>
+        <p>
+            Buggy the Genius Jester is the leader of the Cross Guild and one of the Four Emperors. Starting as an
+            apprentice on Gol D. Roger's ship, Buggy has failed upwards through history with a combination of legendary
+            luck, accidental associations, and a flair for showmanship that has convinced thousands of the world's most
+            dangerous criminals to follow him.
+        </p>
+
+        <div class="quote">
+            "I'm going for the One Piece! Who's with me?!"
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Leader of Cross Guild</h3>
+                <p>
+                    In a shocking turn of events, Buggy became the figurehead for the <strong>Cross Guild</strong>, an
+                    organization that has placed bounties on Marine officers. While fans know he is technically
+                    "servicing" Dracule Mihawk and Sir Crocodile, the rest of the world sees him as the man who commands
+                    two of the most dangerous people on earth.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Bara Bara no Mi</h3>
+                <p>
+                    Buggy possesses the <strong>Bara Bara no Mi</strong> (Chop-Chop Fruit), which allows him to split
+                    his body into pieces and control them independently. This makes him naturally immune to any cutting
+                    attacks, including those from the world's greatest swordsmen.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>The Roger connection</h3>
+                <p>
+                    Buggy lived his youth as an apprentice to the Pirate King, Gol D. Roger. He was "brothers" with
+                    Shanks and fought in battles against the legendary Whitebeard. His proximity to the world's greatest
+                    legends has granted him a status that far exceeds his actual combat prowess.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Legendary Charisma</h3>
+                <p>
+                    Despite his cowardice and greed, Buggy has an accidental ability to inspire fanatical loyalty. His
+                    escape from Impel Down turned him into a messianic figure for hundreds of high-bounty prisoners, and
+                    his recent declaration to find the One Piece has ignited a fire in pirates across the globe.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
+    </footer>
+
+</body>
+
+</html>
