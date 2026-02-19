@@ -988,3 +988,194 @@ footer {
     margin-top: 10rem;
     border-top: 1px solid var(--glass-border);
 }
+
+/* ================================================================
+   WORST GENERATION PAGE
+   ================================================================ */
+
+.wg-intro {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 6rem auto;
+}
+
+.wg-intro p {
+    font-size: 1.1rem;
+    color: #c0c0c0;
+    line-height: 1.9;
+}
+
+.wg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-bottom: 8rem;
+}
+
+.wg-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.wg-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 25px 60px rgba(255, 215, 0, 0.15);
+}
+
+.wg-card-header {
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.wg-epithet {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.wg-name {
+    font-family: 'Pirata One', cursive;
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin: 0 0 0.3rem;
+    line-height: 1.1;
+}
+
+.wg-crew {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: #888;
+    letter-spacing: 2px;
+}
+
+.wg-card-body {
+    padding: 1.5rem 2rem 2rem;
+}
+
+.wg-bounty {
+    font-family: 'Pirata One', cursive;
+    font-size: 1.6rem;
+    color: var(--red-line);
+    margin-bottom: 1rem;
+}
+
+.wg-card-body p {
+    font-size: 0.95rem;
+    color: #bbb;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.wg-badge {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: var(--red-line);
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.wg-badge.captain {
+    background: var(--red-line);
+}
+
+.wg-badge.non-captain {
+    background: linear-gradient(135deg, #2d5a4c, #1a3a30);
+    border: 1px solid #3a7a6a;
+}
+
+.wg-badge.emperor {
+    background: linear-gradient(135deg, #7a3a00, #c0640a);
+    border: 1px solid var(--gold);
+}
+
+.wg-divider {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.wg-divider h3 {
+    font-family: 'Pirata One', cursive;
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 6px;
+    position: relative;
+    display: inline-block;
+}
+
+.wg-divider h3::before,
+.wg-divider h3::after {
+    content: ' ⚔ ';
+    color: var(--red-line);
+}
+
+/* ================================================================
+   STRAW HAT CREW SECTION BACKGROUND
+   ================================================================ */
+
+.crew-section {
+    position: relative;
+    padding: 6rem 3rem;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 8rem;
+    background-image: url('assets/strawhatcrew.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: local;
+}
+
+.crew-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 8, 14, 0.82);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.crew-section>* {
+    position: relative;
+    z-index: 1;
+}
+
+.crew-section h3 {
+    font-family: 'Pirata One', cursive;
+    font-size: 2.2rem;
+    color: var(--gold);
+    letter-spacing: 6px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.crew-section>p {
+    color: #aaa;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.crew-member-lite:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
+    cursor: pointer;
+}
