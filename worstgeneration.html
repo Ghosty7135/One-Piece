@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+================================================================
+TABLE OF CONTENTS
+================================================================
+1. META DATA & LINKS
+2. HEADER & NAVIGATION
+3. WORST GENERATION GRID
+4. FOOTER
+5. SCRIPTS
+================================================================
+-->
+
+<head>
+    <!-- [1. META DATA & LINKS] -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Worst Generation | Eleven Supernovas</title>
+    <meta name="description"
+        content="The twelve most infamous pirates of the Worst Generation — the Eleven Supernovas who shook the world.">
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .wg-intro {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 6rem auto;
+        }
+
+        .wg-intro p {
+            font-size: 1.1rem;
+            color: #c0c0c0;
+            line-height: 1.9;
+        }
+
+        .wg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-bottom: 8rem;
+        }
+
+        .wg-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            position: relative;
+        }
+
+        .wg-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 25px 60px rgba(255, 215, 0, 0.15);
+        }
+
+        .wg-card-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .wg-epithet {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .wg-name {
+            font-family: 'Pirata One', cursive;
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin: 0 0 0.3rem;
+            line-height: 1.1;
+        }
+
+        .wg-crew {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #888;
+            letter-spacing: 2px;
+        }
+
+        .wg-card-body {
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        .wg-bounty {
+            font-family: 'Pirata One', cursive;
+            font-size: 1.6rem;
+            color: var(--red-line);
+            margin-bottom: 1rem;
+        }
+
+        .wg-card-body p {
+            font-size: 0.95rem;
+            color: #bbb;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .wg-badge {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: var(--red-line);
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+        }
+
+        .wg-badge.captain {
+            background: var(--red-line);
+        }
+
+        .wg-badge.non-captain {
+            background: linear-gradient(135deg, #2d5a4c, #1a3a30);
+            border: 1px solid #3a7a6a;
+        }
+
+        .wg-badge.emperor {
+            background: linear-gradient(135deg, #7a3a00, #c0640a);
+            border: 1px solid var(--gold);
+        }
+
+        .wg-divider {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .wg-divider h3 {
+            font-family: 'Pirata One', cursive;
+            font-size: 2rem;
+            color: var(--gold);
+            letter-spacing: 6px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .wg-divider h3::before,
+        .wg-divider h3::after {
+            content: ' ⚔ ';
+            color: var(--red-line);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">The Story</a>
+        <a href="characters.html">The Crew</a>
+        <a href="yonko.html">The Yonko</a>
+        <a href="marines.html">The Marines</a>
+        <a href="revolutionary.html">The Revolutionary Army</a>
+    </nav>
+
+    <header class="reveal-node">
+        <h1>THE WORST GENERATION</h1>
+        <p>ELEVEN SUPERNOVAS WHO SHOOK THE WORLD</p>
+    </header>
+
+    <div class="wide-container">
+        <div class="wg-intro reveal-node">
+            <p>
+                The <strong style="color: var(--gold);">Worst Generation</strong> is a notorious group of twelve pirates
+                who rose to infamy around the same era. Eleven of them, known as the <em>Supernovas</em>, arrived
+                simultaneously at the Sabaody Archipelago — a lawless port before the Grand Line's final leg — each
+                carrying bounties of over 100,000,000 Berries. The twelfth, Marshall D. Teach (Blackbeard), was added
+                later. Their actions following the Summit War of Marineford — defeating two Emperors, dissolving entire
+                crews, and reshaping the New World's power balance — have branded them as the most dangerous generation
+                of pirates in history.
+            </p>
+        </div>
+
+        <!-- Current Yonko from the Generation -->
+        <div class="wg-divider reveal-node">
+            <h3>The New Four Emperors</h3>
+        </div>
+
+        <div class="wg-grid">
+            <a href="luffy.html" class="wg-card reveal-node" style="text-decoration: none; color: inherit;">
+                <div class="wg-badge emperor">YONKO</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Warrior of Liberation</span>
+                    <h2 class="wg-name">Monkey D. Luffy</h2>
+                    <span class="wg-crew">Captain — Straw Hat Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 3,000,000,000</p>
+                    <p>The Fifth Emperor turned undisputed Yonko. After defeating Kaido, Luffy awakened his Devil Fruit
+                        as the legendary Sun God Nika, becoming one of the most powerful beings in the world. His dream:
+                        to become the King of the Pirates.</p>
+                </div>
+            </a>
+
+            <a href="blackbeard.html" class="wg-card reveal-node" style="text-decoration: none; color: inherit;">
+                <div class="wg-badge emperor">YONKO</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Dishonest / Blackbeard</span>
+                    <h2 class="wg-name">Marshall D. Teach</h2>
+                    <span class="wg-crew">Admiral — Blackbeard Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 3,996,000,000</p>
+                    <p>Added to the generation late, Blackbeard is the only known person to wield two Devil Fruits — the
+                        Yami Yami no Mi and the Gura Gura no Mi. The mastermind behind the Paramount War, he rose from
+                        Warlord to Emperor.</p>
+                </div>
+            </a>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge emperor">YONKO</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Surgeon of Death</span>
+                    <h2 class="wg-name">Trafalgar D. Water Law</h2>
+                    <span class="wg-crew">Captain — Heart Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 3,000,000,000</p>
+                    <p>A former Warlord who allied with Luffy to defeat the Yonko Doflamingo and later Kaido. His Ope
+                        Ope no Mi grants the power to create a room where he can manipulate anything within, including
+                        performing immortality operations.</p>
+                </div>
+            </div>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge emperor">YONKO</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">Captain Kid</span>
+                    <h2 class="wg-name">Eustass "Captain" Kid</h2>
+                    <span class="wg-crew">Captain — Kid Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 3,000,000,000</p>
+                    <p>A ferocious pirate who joined the assault on Onigashima and co-defeated Big Mom alongside Law.
+                        Before bounty inflation, he held the highest bounty among the Sabaody Supernovas. His Jiki Jiki
+                        no Mi grants powerful magnetic abilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Remaining Supernovas -->
+        <div class="wg-divider reveal-node">
+            <h3>The Remaining Supernovas</h3>
+        </div>
+
+        <div class="wg-grid">
+            <a href="zoro.html" class="wg-card reveal-node" style="text-decoration: none; color: inherit;">
+                <div class="wg-badge non-captain">NON-CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The King of Hell</span>
+                    <h2 class="wg-name">Roronoa Zoro</h2>
+                    <span class="wg-crew">Combatant — Straw Hat Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 1,111,000,000</p>
+                    <p>The only non-captain among the Supernovas. A master of three-sword style who defeated King the
+                        Wildfire in Wano - awakening Conqueror's Haki. His goal is to surpass Mihawk and become the
+                        World's Greatest Swordsman.</p>
+                </div>
+            </a>
+
+            <a href="sanji.html" class="wg-card reveal-node" style="text-decoration: none; color: inherit;">
+                <div class="wg-badge non-captain">NON-CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Black Leg</span>
+                    <h2 class="wg-name">Vinsmoke Sanji</h2>
+                    <span class="wg-crew">Cook — Straw Hat Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 1,032,000,000</p>
+                    <p>A cook who fights exclusively with his legs to protect his hands. His Germa heritage unlocked an
+                        exoskeleton and Ifrit Jambe — blue flames that surpass magma. Seeks the legendary All Blue where
+                        fish from all seas converge.</p>
+                </div>
+            </a>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge captain">CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Magician</span>
+                    <h2 class="wg-name">Basil Hawkins</h2>
+                    <span class="wg-crew">Captain — Hawkins Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 320,000,000</p>
+                    <p>A tarot-reading pirate who allied with Kaido in Wano. His Wara Wara no Mi allows him to redirect
+                        damage taken onto straw effigies linked to others, making him exceedingly difficult to kill.
+                        Defeated by Killer in Wano.</p>
+                </div>
+            </div>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge captain">CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">Red Flag X Drake</span>
+                    <h2 class="wg-name">X Drake</h2>
+                    <span class="wg-crew">Captain — Drake Pirates / SWORD Agent</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 222,000,000</p>
+                    <p>A former Marine Admiral's son turned pirate. He secretly operates as a member of SWORD — a covert
+                        Marine unit. Possesses the Ancient Zoan Ryu Ryu no Mi Model: Allosaurus, an apex predator
+                        dinosaur transformation.</p>
+                </div>
+            </div>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge captain">CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Roar of the Sea</span>
+                    <h2 class="wg-name">Scratchmen Apoo</h2>
+                    <span class="wg-crew">Captain — On Air Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 350,000,000</p>
+                    <p>His Oto Oto no Mi turns his body into a musical instrument — his music becomes physical attacks
+                        that can cut, explode, or damage anyone who hears them. Allied with Kid and Hawkins early on
+                        before switching to Kaido's side.</p>
+                </div>
+            </div>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge captain">CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Mad Monk</span>
+                    <h2 class="wg-name">Urouge</h2>
+                    <span class="wg-crew">Captain — Fallen Monk Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 108,000,000</p>
+                    <p>A large, enigmatic monk-like pirate with a Paramecia-type Devil Fruit that converts damage
+                        received into raw strength. Notably defeated one of Big Mom's Sweet Commanders — Snack — before
+                        being defeated by Cracker.</p>
+                </div>
+            </div>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge captain">CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">Gang Bege</span>
+                    <h2 class="wg-name">Capone "Gang" Bege</h2>
+                    <span class="wg-crew">Don — Fire Tank Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 300,000,000</p>
+                    <p>A former mafia boss. His Shiro Shiro no Mi turns his body into a literal fortress — hiding entire
+                        armies and weapons inside his castle-like form. He formed a temporary alliance with Luffy and
+                        Law to assassinate Big Mom.</p>
+                </div>
+            </div>
+
+            <div class="wg-card reveal-node">
+                <div class="wg-badge captain">CAPTAIN</div>
+                <div class="wg-card-header">
+                    <span class="wg-epithet">The Glutton</span>
+                    <h2 class="wg-name">Jewelry Bonney</h2>
+                    <span class="wg-crew">Captain — Bonney Pirates</span>
+                </div>
+                <div class="wg-card-body">
+                    <p class="wg-bounty">฿ 140,000,000</p>
+                    <p>Known as the "Big Eating" Empress of the New World. Her Toshi Toshi no Mi grants the power to
+                        alter the age of anyone she touches — aging them to dust or de-aging them to infancy. Daughter
+                        of the legendary Bartholomew Kuma.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ONE PIECE FAN PROJECT</p>
+    </footer>
+
+    <!-- [5. SCRIPTS] -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
